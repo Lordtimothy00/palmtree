@@ -120,14 +120,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-NG">
-      <head>
-        {/* Marks JS as available so scroll-reveal only hides content when it can restore it. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
-          }}
-        />
-      </head>
       <body className="min-h-dvh bg-white antialiased">
         <a
           href="#main"

@@ -146,26 +146,31 @@
 }
 
 /* Reveal-on-scroll.
-   Content is visible by default; only pages where JS is running (html.js) hide it
-   until it scrolls into view, so nothing is lost without JavaScript. */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.75s var(--ease-out-soft),
-    transform 0.75s var(--ease-out-soft);
-  will-change: opacity, transform;
-}
+   Content renders visible by default. Only when scripting is available do we
+   hide it until it scrolls into view — decided in CSS via the `scripting`
+   media query, so no inline script mutates <html> (which would cause a
+   hydration mismatch) and nothing is ever lost without JavaScript.
+   Browsers without `scripting` support simply show the content immediately. */
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.75s var(--ease-out-soft),
+      transform 0.75s var(--ease-out-soft);
+    will-change: opacity, transform;
+  }
 
-.js .reveal[data-visible="true"] {
-  opacity: 1;
-  transform: none;
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js .reveal {
-    opacity: 1;
-    transform: none;
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
