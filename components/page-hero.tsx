@@ -42,7 +42,7 @@ export function PageHero({
           align === "center" && "text-center",
         )}
       >
-        <nav aria-label="Breadcrumb" className={cn("flex items-center gap-1.5 text-[11.5px] text-white/45", align === "center" && "justify-center")}>
+        <nav aria-label="Breadcrumb" className={cn("flex items-center gap-1.5 text-[11.5px] text-white/60", align === "center" && "justify-center")}>
           <Link href="/" className="transition hover:text-solar-300">
             Home
           </Link>

@@ -130,13 +130,13 @@ export default function ContactPage() {
                   <c.icon className="size-5" strokeWidth={1.9} aria-hidden="true" />
                 </span>
                 <span>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                  <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                     {c.label}
                   </span>
                   <span className="mt-1 block break-words font-display text-[15px] font-semibold text-navy-700">
                     {c.value}
                   </span>
-                  <span className="mt-0.5 block text-[12px] text-navy-700/50">
+                  <span className="mt-0.5 block text-[12px] text-navy-700/60">
                     {c.note}
                   </span>
                 </span>
@@ -198,7 +198,7 @@ export default function ContactPage() {
             <h3 className="font-display text-[17px] font-semibold text-navy-700">
               Solar quote request
             </h3>
-            <p className="mt-1 text-[12.5px] text-navy-700/50">
+            <p className="mt-1 text-[12.5px] text-navy-700/60">
               Fields marked * are required.
             </p>
             <div className="mt-6">
@@ -231,7 +231,7 @@ export default function ContactPage() {
                     <MapPin className="size-5" strokeWidth={1.9} aria-hidden="true" />
                   </span>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                       Office address
                     </p>
                     <address className="mt-1 text-[13.5px] not-italic leading-relaxed text-navy-700/80">
@@ -245,14 +245,14 @@ export default function ContactPage() {
                     <Clock className="size-5" strokeWidth={1.9} aria-hidden="true" />
                   </span>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                       Opening hours
                     </p>
                     <ul className="mt-1 space-y-0.5 text-[13px] text-navy-700/75">
                       {site.hours.map((h) => (
                         <li key={h.day} className="flex flex-wrap gap-x-2">
                           <span className="font-medium text-navy-700/85">{h.day}</span>
-                          <span className="text-navy-700/55">{h.time}</span>
+                          <span className="text-navy-700/65">{h.time}</span>
                         </li>
                       ))}
                     </ul>
@@ -264,7 +264,7 @@ export default function ContactPage() {
                     <Navigation className="size-5" strokeWidth={1.9} aria-hidden="true" />
                   </span>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                       Service area
                     </p>
                     <p className="mt-1 text-[13.5px] text-navy-700/80">
@@ -300,7 +300,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <p className="mt-6 max-w-3xl text-[11.5px] leading-relaxed text-navy-700/40">
+          <p className="mt-6 max-w-3xl text-[11.5px] leading-relaxed text-navy-700/65">
             Map location centres on Academy–Monatan Road, Ibadan. Older listings for
             this business may show a previous address — please use the address above.
           </p>

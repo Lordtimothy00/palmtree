@@ -95,7 +95,7 @@ export function ProductsCatalogue() {
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative w-full lg:max-w-sm">
             <Search
-              className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-navy-700/35"
+              className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-navy-700/65"
               aria-hidden="true"
             />
             <label htmlFor="product-search" className="sr-only">
@@ -107,14 +107,14 @@ export function ProductsCatalogue() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search panels, batteries, cameras…"
-              className="h-11 w-full rounded-full border border-line bg-mist/60 pl-11 pr-10 text-[13.5px] text-navy-700 placeholder:text-navy-700/40 transition focus:border-forest-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-forest-700/10"
+              className="h-11 w-full rounded-full border border-line bg-mist/60 pl-11 pr-10 text-[13.5px] text-navy-700 placeholder:text-navy-700/65 transition focus:border-forest-600 focus:bg-white focus:outline-none focus:ring-4 focus:ring-forest-700/10"
             />
             {query && (
               <button
                 type="button"
                 onClick={() => setQuery("")}
                 aria-label="Clear search"
-                className="absolute right-3 top-1/2 flex size-6 -translate-y-1/2 items-center justify-center rounded-full text-navy-700/40 transition hover:bg-navy-700/5 hover:text-navy-700"
+                className="absolute right-3 top-1/2 flex size-6 -translate-y-1/2 items-center justify-center rounded-full text-navy-700/65 transition hover:bg-navy-700/5 hover:text-navy-700"
               >
                 <X className="size-3.5" aria-hidden="true" />
               </button>
@@ -122,7 +122,7 @@ export function ProductsCatalogue() {
           </div>
 
           <div className="no-scrollbar -mx-1 flex items-center gap-2 overflow-x-auto px-1 lg:flex-wrap lg:justify-end">
-            <span className="hidden items-center gap-1.5 pr-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/35 lg:flex">
+            <span className="hidden items-center gap-1.5 pr-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/65 lg:flex">
               <SlidersHorizontal className="size-3.5" aria-hidden="true" />
               Filter
             </span>
@@ -145,7 +145,7 @@ export function ProductsCatalogue() {
           </div>
         </div>
 
-        <p className="mt-3 text-[11.5px] text-navy-700/45" aria-live="polite">
+        <p className="mt-3 text-[11.5px] text-navy-700/60" aria-live="polite">
           Showing {filtered.length} of {products.length} products
           {category !== "All" && ` in ${category}`}
           {query && ` matching “${query}”`}
@@ -161,14 +161,14 @@ export function ProductsCatalogue() {
         </div>
       ) : (
         <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl border border-dashed border-line bg-mist/50 px-6 py-14 text-center">
-          <span className="flex size-12 items-center justify-center rounded-full bg-white text-navy-700/40 shadow-soft">
+          <span className="flex size-12 items-center justify-center rounded-full bg-white text-navy-700/65 shadow-soft">
             <Search className="size-5" aria-hidden="true" />
           </span>
           <div>
             <p className="font-display text-[16px] font-semibold text-navy-700">
               No products match that search
             </p>
-            <p className="mt-1 text-[13px] text-navy-700/55">
+            <p className="mt-1 text-[13px] text-navy-700/65">
               Try a different term, or ask us directly — we may still be able to
               source what you need.
             </p>
@@ -220,7 +220,7 @@ export function ProductsCatalogue() {
                   <span className="mt-1 block text-[13.5px] font-semibold text-navy-700">
                     {c}
                   </span>
-                  <span className="mt-0.5 block text-[11.5px] text-navy-700/45">
+                  <span className="mt-0.5 block text-[11.5px] text-navy-700/60">
                     {count} products
                   </span>
                 </span>
@@ -285,7 +285,7 @@ export function ProductsCatalogue() {
                 </p>
 
                 <div className="mt-5">
-                  <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/40">
+                  <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/65">
                     <Tag className="size-3.5" aria-hidden="true" />
                     Key points
                   </p>
@@ -300,7 +300,7 @@ export function ProductsCatalogue() {
                 </div>
 
                 <div className="mt-5 rounded-xl bg-mist/80 p-3.5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/40">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-navy-700/65">
                     Suited to
                   </p>
                   <p className="mt-1 text-[12.5px] text-navy-700/70">
@@ -308,7 +308,7 @@ export function ProductsCatalogue() {
                   </p>
                 </div>
 
-                <p className="mt-4 text-[11px] leading-relaxed text-navy-700/40">
+                <p className="mt-4 text-[11px] leading-relaxed text-navy-700/65">
                   Specifications, brands and pricing are confirmed with our team on
                   enquiry. We do not publish unverified product details.
                 </p>
@@ -337,7 +337,7 @@ export function ProductsCatalogue() {
 
                 <a
                   href={`tel:${site.phoneTel}`}
-                  className="mt-3 block text-center text-[12px] font-medium text-navy-700/45 transition hover:text-forest-700"
+                  className="mt-3 block text-center text-[12px] font-medium text-navy-700/60 transition hover:text-forest-700"
                 >
                   or call {site.phoneDisplay}
                 </a>

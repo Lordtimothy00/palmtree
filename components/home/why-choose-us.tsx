@@ -91,7 +91,7 @@ export function WhyChooseUs() {
                   <h3 className="font-display text-[15px] font-semibold text-white">
                     {reason.title}
                   </h3>
-                  <p className="text-[13px] leading-relaxed text-white/55">
+                  <p className="text-[13px] leading-relaxed text-white/65">
                     {reason.body}
                   </p>
                 </div>

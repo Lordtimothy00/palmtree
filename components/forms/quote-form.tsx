@@ -353,7 +353,7 @@ export function QuoteForm({
             </>
           )}
         </Button>
-        <p className={cn("text-[11.5px] leading-relaxed text-navy-700/45 sm:max-w-56")}>
+        <p className={cn("text-[11.5px] leading-relaxed text-navy-700/60 sm:max-w-56")}>
           We use your details only to respond to this enquiry.
         </p>
       </div>

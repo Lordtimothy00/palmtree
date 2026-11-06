@@ -23,7 +23,7 @@ export function WhatsAppFloat() {
             type="button"
             onClick={() => setDismissed(true)}
             aria-label="Dismiss WhatsApp prompt"
-            className="absolute right-1.5 top-1.5 flex size-6 items-center justify-center rounded-full text-navy-700/40 transition hover:bg-mist hover:text-navy-700"
+            className="absolute right-1.5 top-1.5 flex size-6 items-center justify-center rounded-full text-navy-700/65 transition hover:bg-mist hover:text-navy-700"
           >
             <X className="size-3.5" aria-hidden="true" />
           </button>

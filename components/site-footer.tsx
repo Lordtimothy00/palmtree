@@ -70,7 +70,7 @@ export function SiteFooter() {
 
           {/* Navigation */}
           <nav aria-label="Footer navigation">
-            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/50">
+            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/65">
               Navigate
             </h2>
             <ul className="mt-5 space-y-3">
@@ -90,7 +90,7 @@ export function SiteFooter() {
 
           {/* Services */}
           <nav aria-label="Footer services">
-            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/50">
+            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/65">
               Services
             </h2>
             <ul className="mt-5 space-y-3">
@@ -109,7 +109,7 @@ export function SiteFooter() {
 
           {/* Contact */}
           <div>
-            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/50">
+            <h2 className="font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-white/65">
               Get in touch
             </h2>
             <ul className="mt-5 space-y-4 text-[14px]">
@@ -160,7 +160,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-[12.5px] text-white/45 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-[12.5px] text-white/60 md:flex-row md:items-center md:justify-between">
           <p>
             © {year} {site.name}. All rights reserved.
           </p>

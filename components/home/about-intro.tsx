@@ -89,7 +89,7 @@ export function AboutIntro() {
                 <ArrowUpRight className="size-3.5" aria-hidden="true" />
               </span>
             </Link>
-            <span className="flex items-center gap-2 text-[12.5px] text-navy-700/50">
+            <span className="flex items-center gap-2 text-[12.5px] text-navy-700/60">
               <Check className="size-3.5 text-forest-600" aria-hidden="true" />
               Nationwide service coverage
             </span>

@@ -95,6 +95,5 @@ export const socials = [
   {
     label: "Facebook",
     href: site.facebook,
-    handle: "Palmtree / Wojuade Solar",
   },
 ];

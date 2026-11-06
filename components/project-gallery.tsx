@@ -68,7 +68,7 @@ export function ProjectGallery({
                 <span
                   className={cn(
                     "ml-1.5 text-[10.5px]",
-                    filter === f ? "text-white/60" : "text-navy-700/35",
+                    filter === f ? "text-white/60" : "text-navy-700/65",
                   )}
                 >
                   {count}
@@ -123,7 +123,7 @@ export function ProjectGallery({
                     <span className="mt-1 block font-display text-[15px] font-semibold leading-snug text-white">
                       {project.title}
                     </span>
-                    <span className="mt-0.5 block text-[11.5px] text-white/55">
+                    <span className="mt-0.5 block text-[11.5px] text-white/65">
                       {project.location}
                     </span>
                   </span>
@@ -138,7 +138,7 @@ export function ProjectGallery({
       </div>
 
       {visible.length === 0 && (
-        <p className="mt-10 rounded-2xl border border-dashed border-line p-8 text-center text-sm text-navy-700/50">
+        <p className="mt-10 rounded-2xl border border-dashed border-line p-8 text-center text-sm text-navy-700/60">
           No projects in this category yet.
         </p>
       )}

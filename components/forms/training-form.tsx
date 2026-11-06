@@ -178,7 +178,7 @@ export function TrainingForm() {
           </>
         )}
       </Button>
-      <p className="text-[11.5px] leading-relaxed text-navy-700/45">
+      <p className="text-[11.5px] leading-relaxed text-navy-700/60">
         Programme dates, fees and certification are confirmed by our team before any
         payment. Submitting this form does not commit you to a place.
       </p>

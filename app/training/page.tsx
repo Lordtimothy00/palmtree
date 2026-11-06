@@ -206,7 +206,7 @@ export default function TrainingPage() {
                   </p>
 
                   <div className="mt-5 rounded-xl bg-mist/70 p-4">
-                    <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-navy-700/40">
+                    <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-navy-700/65">
                       What you will learn
                     </p>
                     <ul className="mt-2.5 space-y-1.5">
@@ -226,7 +226,7 @@ export default function TrainingPage() {
                     </ul>
                   </div>
 
-                  <p className="mt-4 text-[12px] leading-relaxed text-navy-700/55">
+                  <p className="mt-4 text-[12px] leading-relaxed text-navy-700/65">
                     <span className="font-semibold text-navy-700/70">Best for:</span>{" "}
                     {programme.bestFor}
                   </p>
@@ -272,7 +272,7 @@ export default function TrainingPage() {
             </Reveal>
           </div>
 
-          <p className="mx-auto mt-8 max-w-2xl rounded-2xl border border-dashed border-forest-700/20 bg-white/60 px-5 py-4 text-center text-[12px] leading-relaxed text-navy-700/55">
+          <p className="mx-auto mt-8 max-w-2xl rounded-2xl border border-dashed border-forest-700/20 bg-white/60 px-5 py-4 text-center text-[12px] leading-relaxed text-navy-700/65">
             Programme dates, fees, duration and certification are confirmed directly
             by our team. We do not publish unconfirmed schedules or costs on this
             page.
@@ -335,7 +335,7 @@ export default function TrainingPage() {
             </ul>
 
             <div className="mt-7 rounded-2xl border border-line bg-white p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                 Prefer WhatsApp?
               </p>
               <p className="mt-2 text-[13px] leading-relaxed text-navy-700/65">

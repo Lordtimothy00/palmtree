@@ -81,7 +81,7 @@ export function Lightbox({
       }}
     >
       <div className="flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-white/50">
+        <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-white/65">
           {index + 1} / {items.length}
         </p>
         <button
@@ -129,7 +129,7 @@ export function Lightbox({
             <p className="mt-1 text-[13px] leading-relaxed text-white/60">
               {project.caption}
             </p>
-            <p className="mt-1 text-[12px] text-white/40">{project.location}</p>
+            <p className="mt-1 text-[12px] text-white/65">{project.location}</p>
           </figcaption>
         </figure>
 

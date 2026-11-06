@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const fieldBase =
-  "w-full rounded-xl border border-line bg-white px-4 text-[14px] text-navy-700 placeholder:text-navy-700/35 transition-all duration-200 hover:border-forest-700/25 focus:border-forest-600 focus:outline-none focus:ring-4 focus:ring-forest-700/10 disabled:opacity-60";
+  "w-full rounded-xl border border-line bg-white px-4 text-[14px] text-navy-700 placeholder:text-navy-700/60 transition-all duration-200 hover:border-forest-700/25 focus:border-forest-600 focus:outline-none focus:ring-4 focus:ring-forest-700/10 disabled:opacity-60";
 
 export function Field({
   label,
@@ -35,7 +35,7 @@ export function Field({
             *
           </span>
         ) : (
-          <span className="ml-1 font-normal text-navy-700/40">(optional)</span>
+          <span className="ml-1 font-normal text-navy-700/65">(optional)</span>
         )}
       </label>
       {children}
@@ -44,7 +44,7 @@ export function Field({
           {error}
         </p>
       ) : hint ? (
-        <p className="text-[11.5px] text-navy-700/45">{hint}</p>
+        <p className="text-[11.5px] text-navy-700/60">{hint}</p>
       ) : null}
     </div>
   );
@@ -99,7 +99,7 @@ export function Select({
         {children}
       </select>
       <svg
-        className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-navy-700/40"
+        className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-navy-700/65"
         viewBox="0 0 20 20"
         fill="none"
         aria-hidden="true"

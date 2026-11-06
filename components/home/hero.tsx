@@ -86,7 +86,7 @@ export function Hero() {
             </ButtonLink>
           </div>
 
-          <p className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12.5px] text-white/55">
+          <p className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12.5px] text-white/65">
             <a href={`tel:${site.phoneTel}`} className="transition hover:text-solar-300">
               Call {site.phoneDisplay}
             </a>
@@ -111,7 +111,7 @@ export function Hero() {
                 <h3 className="font-display text-[13.5px] font-semibold text-white">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-[12.5px] leading-relaxed text-white/55">
+                <p className="mt-1 text-[12.5px] leading-relaxed text-white/65">
                   {item.body}
                 </p>
               </div>

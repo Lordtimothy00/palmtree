@@ -51,7 +51,7 @@ export default function ProjectsPage() {
 
       <section className="bg-white py-14 md:py-20">
         <div className="container-page">
-          <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-navy-700/50">
+          <div className="mb-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-navy-700/60">
             <span className="inline-flex items-center gap-2">
               <Camera className="size-4 text-forest-600" aria-hidden="true" />
               {projects.length} project images

@@ -146,7 +146,7 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-8 rounded-2xl border border-line bg-mist/70 p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                 What we hold ourselves to
               </p>
               <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
@@ -199,7 +199,7 @@ export default function AboutPage() {
                 <p className="font-display text-[14px] font-semibold">
                   Palmtree Technology Services
                 </p>
-                <p className="mt-0.5 text-[12px] text-white/55">
+                <p className="mt-0.5 text-[12px] text-white/65">
                   Also known as Palmtree Solar Master
                 </p>
               </div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
                       <span className="block text-[14px] font-semibold text-navy-700">
                         {service.title}
                       </span>
-                      <span className="mt-0.5 block text-[12px] text-navy-700/55">
+                      <span className="mt-0.5 block text-[12px] text-navy-700/65">
                         {service.short}
                       </span>
                     </span>
@@ -312,7 +312,7 @@ export default function AboutPage() {
                 </p>
                 <dl className="mt-7 space-y-4">
                   <div>
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                       Office address
                     </dt>
                     <dd className="mt-1 text-[14px] font-medium text-navy-700">
@@ -320,7 +320,7 @@ export default function AboutPage() {
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                    <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                       Service area
                     </dt>
                     <dd className="mt-1 text-[14px] font-medium text-navy-700">

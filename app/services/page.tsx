@@ -118,7 +118,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="mt-6 rounded-2xl border border-line bg-white p-5">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                         What you get
                       </p>
                       <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">

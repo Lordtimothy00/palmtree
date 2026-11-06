@@ -28,7 +28,7 @@ export function FeaturedProjects() {
           <ProjectGallery items={projects} limit={6} masonryColumns={3} />
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-navy-700/50">
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[12px] text-navy-700/60">
           {projectCategories.map((c) => (
             <span key={c} className="flex items-center gap-2">
               <span className="size-1.5 rounded-full bg-forest-400" aria-hidden="true" />

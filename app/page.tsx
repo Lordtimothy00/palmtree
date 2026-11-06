@@ -85,13 +85,13 @@ export default function HomePage() {
                   <span className="flex size-11 items-center justify-center rounded-xl bg-forest-50 text-forest-700 transition group-hover:bg-forest-700 group-hover:text-solar-300">
                     <option.icon className="size-5" strokeWidth={1.9} aria-hidden="true" />
                   </span>
-                  <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/40">
+                  <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-navy-700/65">
                     {option.title}
                   </p>
                   <p className="mt-1 break-words font-display text-[15px] font-semibold text-navy-700">
                     {option.value}
                   </p>
-                  <p className="mt-1 text-[12px] leading-relaxed text-navy-700/50">
+                  <p className="mt-1 text-[12px] leading-relaxed text-navy-700/60">
                     {option.note}
                   </p>
                 </a>

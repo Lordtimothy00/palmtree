@@ -49,7 +49,7 @@ export function FeaturedProducts() {
           ))}
         </div>
 
-        <p className="mt-8 rounded-2xl border border-dashed border-line bg-mist/60 px-5 py-4 text-center text-[12.5px] leading-relaxed text-navy-700/55">
+        <p className="mt-8 rounded-2xl border border-dashed border-line bg-mist/60 px-5 py-4 text-center text-[12.5px] leading-relaxed text-navy-700/65">
           This is an enquiry catalogue, not an online store. Availability and pricing
           are confirmed by our team when you enquire.
         </p>
