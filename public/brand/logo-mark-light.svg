@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Palmtree Technology Services">
+  <defs>
+    <linearGradient id="ptbl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f7d4b"/><stop offset="52%" stop-color="#075B32"/><stop offset="100%" stop-color="#042e1e"/>
+    </linearGradient>
+    <linearGradient id="ptsl" x1="0.25" y1="0" x2="0.75" y2="1">
+      <stop offset="0%" stop-color="#FFE796"/><stop offset="55%" stop-color="#FDCB05"/><stop offset="100%" stop-color="#EFB200"/>
+    </linearGradient>
+    <clipPath id="ptcl"><rect width="64" height="64" rx="15"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#ptcl)">
+    <rect width="64" height="64" fill="url(#ptbl)"/>
+    <rect x="0.85" y="0.85" width="62.3" height="62.3" rx="14.2" fill="none" stroke="#FDCB05" stroke-width="1.8" opacity=".62"/>
+    <circle cx="32" cy="33.5" r="17" fill="url(#ptsl)"/>
+
+    <g stroke="#06371f" fill="none" stroke-linecap="round">
+      <!-- trunk -->
+      <path d="M31 48.5c.3-5.6 1-10 2.4-14" stroke-width="3.1"/>
+      <!-- fronds -->
+      <path d="M33.4 34.5c2.6-3.6 6.2-5.6 10-5.7" stroke-width="2.7"/>
+      <path d="M33.4 34.5c3.4.8 5.8 3 6.9 6.2" stroke-width="2.7"/>
+      <path d="M33.4 34.5c-2.6-3.7-6.2-5.8-10-6" stroke-width="2.7"/>
+      <path d="M33.4 34.5c-3.4 1-5.7 3.2-6.8 6.3" stroke-width="2.7"/>
+      <path d="M33.4 34.5c-.3-3.3.6-6 2.4-8.3" stroke-width="2.7"/>
+    </g>
+  </g>
+</svg>

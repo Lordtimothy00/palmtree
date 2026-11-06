@@ -1,0 +1,208 @@
+@import "tailwindcss";
+@import "@fontsource-variable/sora";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme {
+  --font-display: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand palette */
+  --color-forest-50: #eff8f2;
+  --color-forest-100: #d7eddf;
+  --color-forest-200: #b0dcc0;
+  --color-forest-300: #7bc39b;
+  --color-forest-400: #43a373;
+  --color-forest-500: #1c8655;
+  --color-forest-600: #0b6b40;
+  --color-forest-700: #075b32;
+  --color-forest-800: #064a2a;
+  --color-forest-900: #053c23;
+  --color-forest-950: #022314;
+
+  --color-solar-50: #fffbea;
+  --color-solar-100: #fff4c4;
+  --color-solar-200: #ffe885;
+  --color-solar-300: #ffd94d;
+  --color-solar-400: #fdcb05;
+  --color-solar-500: #e5b300;
+  --color-solar-600: #c08a00;
+  --color-solar-700: #996200;
+
+  --color-navy-50: #eef1f9;
+  --color-navy-100: #dbe1f0;
+  --color-navy-200: #b6c1de;
+  --color-navy-300: #8797c4;
+  --color-navy-400: #55689f;
+  --color-navy-500: #33477a;
+  --color-navy-600: #1f2f5c;
+  --color-navy-700: #101d45;
+  --color-navy-800: #0b1531;
+  --color-navy-900: #070e21;
+
+  --color-mist: #f7f9f5;
+  --color-line: #e3e9df;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.75rem;
+
+  --shadow-soft: 0 1px 2px rgba(7, 91, 50, 0.04), 0 12px 32px -12px rgba(7, 91, 50, 0.16);
+  --shadow-lift: 0 2px 4px rgba(16, 29, 69, 0.04), 0 24px 48px -20px rgba(7, 91, 50, 0.28);
+  --shadow-glow: 0 18px 40px -18px rgba(253, 203, 5, 0.65);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-navy-700);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01" on, "cv11" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+    color: var(--color-navy-700);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-solar-300);
+    color: var(--color-forest-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-forest-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 84rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+  @media (min-width: 1280px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Sun/palm inspired motif used behind dark sections */
+@utility texture-rays {
+  background-image: radial-gradient(
+      circle at 82% 12%,
+      rgba(253, 203, 5, 0.16) 0%,
+      rgba(253, 203, 5, 0) 42%
+    ),
+    radial-gradient(circle at 8% 88%, rgba(28, 134, 85, 0.35) 0%, rgba(28, 134, 85, 0) 45%);
+}
+
+@utility texture-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility texture-dots {
+  background-image: radial-gradient(rgba(7, 91, 50, 0.14) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Reveal-on-scroll.
+   Content is visible by default; only pages where JS is running (html.js) hide it
+   until it scrolls into view, so nothing is lost without JavaScript. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.75s var(--ease-out-soft),
+    transform 0.75s var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+
+.js .reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Soft image zoom on hover for gallery tiles */
+.zoom-media img {
+  transition: transform 0.9s var(--ease-out-soft);
+}
+.group:hover .zoom-media img,
+.zoom-media:hover img {
+  transform: scale(1.045);
+}
+
+/* Hide scrollbar for horizontal scrollers while keeping keyboard access */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animated underline for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--color-solar-400);
+  transition: transform 0.35s var(--ease-out-soft);
+}
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
