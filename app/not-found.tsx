@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, MessageCircle, Phone, Sun } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
@@ -21,8 +20,9 @@ export default function NotFound() {
           This page has gone off-grid.
         </h1>
         <p className="mx-auto mt-4 max-w-md text-[14.5px] leading-relaxed text-white/65">
-          The page you were looking for does not exist or has moved. Try one of the
-          links below, or message us and we will point you in the right direction.
+          The page you were looking for does not exist or has moved. Try one of
+          the sections below, or message us and we will point you in the right
+          direction.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -40,15 +40,16 @@ export default function NotFound() {
           </ButtonLink>
         </div>
 
+        {/* Plain anchors: the site is one page, so these are in-page jumps. */}
         <div className="mx-auto mt-12 flex max-w-2xl flex-wrap justify-center gap-x-6 gap-y-3">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
-              href={link.href}
+              href={`/${link.href}`}
               className="text-[13px] font-medium text-white/60 transition hover:text-solar-300"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
 
