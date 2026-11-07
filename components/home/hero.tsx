@@ -45,8 +45,8 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="container-page relative pb-12 pt-14 md:pb-16 md:pt-20 lg:pb-20 lg:pt-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="container-page relative pb-12 pt-14 md:pb-16 md:pt-20 xl:pb-20 xl:pt-24">
+        <div className="grid items-center gap-12 xl:grid-cols-[1.02fr_0.98fr] xl:gap-16">
           {/* Copy */}
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-solar-300">
@@ -54,7 +54,7 @@ export function Hero() {
               Solar energy &amp; technology · Ibadan, Nigeria
             </span>
 
-            <h1 className="mt-6 text-[clamp(2.3rem,5.6vw,4rem)] font-semibold leading-[1.03] tracking-[-0.035em] text-white">
+            <h1 className="mt-6 text-balance text-[clamp(1.85rem,7.6vw,3.2rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-white">
               Power Your World.
               <span className="mt-1 block text-solar-400">
                 Embrace a Brighter Future.
@@ -114,8 +114,8 @@ export function Hero() {
                 width={960}
                 height={1280}
                 priority
-                sizes="(max-width: 1024px) 92vw, 44vw"
-                className="h-[340px] w-full object-cover object-[62%_42%] sm:h-[420px] lg:h-[500px]"
+                sizes="(max-width: 1279px) 92vw, 46vw"
+                className="h-[340px] w-full object-cover object-[62%_42%] sm:h-[420px] xl:h-[510px]"
               />
               <div
                 className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent"
