@@ -29,7 +29,10 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr_1fr_1.15fr]">
           {/* Brand */}
           <div>
-            <Logo variant="light" size={46} />
+            {/* The official logo is navy/white-backed, so it sits on a light plate here. */}
+            <span className="inline-flex rounded-2xl bg-white px-4 py-3 shadow-sm">
+              <Logo size={44} />
+            </span>
             <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-white/60">
               Solar energy installation, quality solar products, batteries,
               inverters and security technology — delivered by a team that
