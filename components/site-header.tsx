@@ -38,19 +38,16 @@ export function SiteHeader() {
     return () => observer.disconnect();
   }, []);
 
-  // Lock scroll and allow Escape to dismiss the mobile sheet.
+  // Escape dismisses the mobile sheet. The sheet is part of the page flow, not
+  // an overlay, so body scroll is deliberately left alone — locking it would
+  // trap anyone on a short screen who opened the menu by accident.
   useEffect(() => {
     if (!open) return;
-    const original = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = original;
-      window.removeEventListener("keydown", onKey);
-    };
+    return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
   const close = useCallback(() => setOpen(false), []);

@@ -108,6 +108,13 @@ export function EnquiryForm() {
             Call {site.phoneDisplay}
           </ButtonLink>
         </div>
+        <button
+          type="button"
+          onClick={() => setState("idle")}
+          className="text-[12.5px] font-semibold text-forest-700 underline-offset-4 transition hover:underline"
+        >
+          Send another enquiry
+        </button>
       </div>
     );
   }

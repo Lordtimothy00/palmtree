@@ -61,7 +61,7 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
     /* Sticky header offset for in-page anchors */
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 6rem;
   }
 
   body {

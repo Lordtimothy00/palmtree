@@ -7,7 +7,7 @@ import { productEnquiryMessage, whatsappLink } from "@/lib/site";
 
 export function Products() {
   return (
-    <section id="products" className="scroll-mt-20 bg-white py-20 md:py-28">
+    <section id="products" className="scroll-mt-24 bg-white py-20 md:py-28">
       <div className="container-page">
         <Reveal>
           <SectionHeading

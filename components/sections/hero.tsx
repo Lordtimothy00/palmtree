@@ -5,7 +5,7 @@ import { site, whatsappLink, whatsappMessages } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section id="home" className="relative isolate scroll-mt-20 overflow-hidden bg-navy-700">
+    <section id="home" className="relative isolate scroll-mt-24 overflow-hidden bg-navy-700">
       <Image
         src="/images/company/hero-installation.jpg"
         alt="Palmtree technicians installing solar panels on the roof of a Nigerian home"
