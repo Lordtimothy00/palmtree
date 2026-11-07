@@ -13,9 +13,9 @@ export const site = {
     "Palmtree Technology Services is a Nigerian solar energy and technology company delivering solar installation, inverters, batteries, solar products, CCTV and practical solar training to homes and businesses nationwide.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.palmtreetechservices.com",
   locale: "en_NG",
-  phoneDisplay: "0805 127 0913",
-  phoneTel: "+2348051270913",
-  whatsappNumber: "2348051270913",
+  phoneDisplay: "0802 434 6515",
+  phoneTel: "+2348024346515",
+  whatsappNumber: "2348024346515",
   email: "palmtreeng@gmail.com",
   facebook: "https://www.facebook.com/wojuadesolar/",
   address: {

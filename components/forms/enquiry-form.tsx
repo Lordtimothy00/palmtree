@@ -155,7 +155,7 @@ export function EnquiryForm() {
             type="tel"
             inputMode="tel"
             autoComplete="tel"
-            placeholder="0805 127 0913"
+            placeholder="0802 434 6515"
             required
             invalid={!!errors.phone}
             aria-describedby={errors.phone ? "c-phone-error" : undefined}
