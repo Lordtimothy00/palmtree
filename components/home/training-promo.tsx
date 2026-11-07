@@ -81,7 +81,7 @@ export function TrainingPromo() {
                   src="/brand/emblem.png"
                   alt=""
                   width={64}
-                  height={37}
+                  height={61}
                   className="h-full w-full object-contain"
                   aria-hidden="true"
                 />
