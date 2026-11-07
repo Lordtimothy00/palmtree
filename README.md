@@ -19,17 +19,21 @@ npm start        # serve the production build
 
 ## Pages
 
-| Route       | Purpose |
-| ----------- | ------- |
-| `/`         | Hero, trust highlights, about intro, services, featured products, why choose us, project gallery, training promo, CTA, contact shortcuts |
-| `/about`    | Company profile, expertise, approach, coverage |
-| `/services` | Eight service sections, each with photography, benefits, WhatsApp and quote CTAs |
-| `/products` | Enquiry catalogue with category filters, search, deep-linkable detail modals |
-| `/projects` | Masonry gallery with category filtering and a full-screen lightbox |
-| `/training` | Palmtree Solar Master programmes and a registration enquiry form |
-| `/contact`  | Contact channels, quote form, general enquiry form, office map and directions |
+This is a **single-page site**. Everything lives on `/` and the header links
+scroll to sections.
 
-`robots.txt` and `sitemap.xml` are generated from `app/robots.ts` and `app/sitemap.ts`.
+| Section | Anchor | Contents |
+| ------- | ------ | -------- |
+| Hero | `#home` | Headline, description, Get a Quote / Chat on WhatsApp |
+| Services | `#services` | Six service cards with photography and WhatsApp enquiry |
+| Products | `#products` | Eight product cards, each with a WhatsApp enquiry naming the product |
+| About | `#about` | Company description, shop photograph, what we do |
+| Contact | `#contact` | Phone, email, address, service area, hours, enquiry form, map |
+| Footer | — | Logo, phone, email, Facebook, copyright |
+
+Navigation highlights the section in view and smooth-scrolls to it.
+`robots.txt` and `sitemap.xml` are generated from `app/robots.ts` and
+`app/sitemap.ts`, and list the single canonical URL.
 
 ## Brand
 
@@ -122,22 +126,24 @@ sections include the service name, and training cards include the programme.
 
 ## Photography note
 
-Photography falls into three groups, and it matters which is which:
+Almost every photograph on the site is the company's own, supplied directly:
 
-**Company photographs — genuine.** `public/images/company/rooftop-installation-team.jpg`
-is a real photograph of the Palmtree team installing panels on a rooftop. It is used in
-the homepage hero, unretouched apart from cropping.
+- **Installations** — technicians mounting panels on a rooftop array, and the
+  full team working on a residential roof (`hero-installation.jpg`,
+  `service-solar-installation.jpg`).
+- **Equipment** — inverters, battery banks, tubular batteries, solar home
+  systems, fans, refrigerators and freezers, all photographed in the business'
+  own showroom.
+- **Training** — Palmtree Solar Master cohorts, including one gathered outside
+  the shop under the company signboard.
+- **The shop** — the Academy–Monatan Road premises and its signboard.
 
-**Placeholders — must be replaced.** The other photographs in `public/images/` are
-licensed stock or AI-generated images used to demonstrate the design, plus ten labelled
-brand-coloured images that read "IMAGE TO BE SUPPLIED BY PALMTREE" (eight product shots
-and two gallery slots). **Replace these with the company's own installation and training
-photography before launch** so the portfolio, service photos and catalogue show genuine
-work, then update the `image` / `imageAlt` fields in `lib/data.ts`.
-
-**Never presented as real projects.** No stock image is labelled as a specific
-completed Palmtree project. When you add real photographs, that is the moment the
-gallery can honestly be described as a portfolio.
+**One exception:** `service-cctv.jpg` and `product-cctv-cameras.jpg` are
+AI-generated product shots of a dome security camera. No photograph of the
+company's own CCTV installations was supplied, and while the shop signboard
+does list CCTV, using a crowd photo for that card would have been misleading.
+Replace these two files with real camera installation photos when available —
+they are the only non-company images on the site.
 
 ## Project structure
 

@@ -1,8 +1,13 @@
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { ComponentProps, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "whatsapp" | "outlineLight";
+type Variant =
+  | "primary"
+  | "secondary"
+  | "ghost"
+  | "whatsapp"
+  | "outline"
+  | "outlineLight";
 type Size = "sm" | "md" | "lg";
 
 const base =
@@ -15,6 +20,8 @@ const variants: Record<Variant, string> = {
     "bg-forest-700 text-white shadow-soft hover:bg-forest-600 hover:-translate-y-0.5",
   ghost:
     "border border-forest-700/20 bg-white/70 text-forest-800 backdrop-blur hover:border-forest-700/40 hover:bg-white hover:-translate-y-0.5",
+  outline:
+    "border border-forest-700/30 bg-white text-forest-800 hover:border-forest-700/60 hover:bg-mist hover:-translate-y-0.5",
   outlineLight:
     "border border-white/30 bg-white/10 text-white backdrop-blur-md hover:border-white/60 hover:bg-white/20 hover:-translate-y-0.5",
   whatsapp:
@@ -57,28 +64,25 @@ export function ButtonLink({
   size = "md",
   className,
   children,
-  external,
   ...props
-}: CommonProps & { href: string; external?: boolean } & Omit<
+}: CommonProps & { href: string } & Omit<
     ComponentProps<"a">,
     "href"
   >) {
   const cls = cn(base, variants[variant], sizes[size], className);
-  if (external || href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
-    return (
-      <a
-        href={href}
-        className={cls}
-        {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        {...props}
-      >
-        {children}
-      </a>
-    );
-  }
+  // This site is a single page: every link is an in-page anchor, an external
+  // URL, or a tel:/mailto: link. A plain anchor handles all three, and skipping
+  // next/link keeps the client bundle free of the router.
   return (
-    <Link href={href} className={cls} {...props}>
+    <a
+      href={href}
+      className={cls}
+      {...(href.startsWith("http")
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
+      {...props}
+    >
       {children}
-    </Link>
+    </a>
   );
 }

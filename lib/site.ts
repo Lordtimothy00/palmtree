@@ -8,7 +8,7 @@ export const site = {
   name: "Palmtree Technology Services",
   shortName: "Palmtree",
   brandAlt: "Palmtree Solar Master",
-  tagline: "Power Your World. Embrace a Brighter Future.",
+  tagline: "Reliable Solar Energy. Power Without Limits.",
   description:
     "Palmtree Technology Services is a Nigerian solar energy and technology company delivering solar installation, inverters, batteries, solar products, CCTV and practical solar training to homes and businesses nationwide.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.palmtreetechservices.com",
@@ -42,14 +42,13 @@ export const site = {
 
 export const fullAddress = `${site.address.line1}, ${site.address.line2}, ${site.address.city}, ${site.address.state}, ${site.address.country}`;
 
+/** Single-page anchors. Order matches the page sections. */
 export const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Products", href: "/products" },
-  { label: "Projects", href: "/projects" },
-  { label: "Training", href: "/training" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Products", href: "#products" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ] as const;
 
 /** Build a wa.me deep link with a pre-filled, context-aware message. */

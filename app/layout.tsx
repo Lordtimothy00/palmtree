@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { site, fullAddress } from "@/lib/site";
 
-const titleDefault = `${site.name} | Solar Installation, Products & Training in Nigeria`;
+const titleDefault = `${site.name} | Solar Installation, Solar Panels & Inverters in Nigeria`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     default: titleDefault,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
+  description:
+    "Palmtree Technology Services (Palmtree Solar Master) — solar installation, solar panels, inverters, batteries, solar products and CCTV in Ibadan, serving all of Nigeria.",
   applicationName: site.name,
   keywords: [
     "solar installation in Nigeria",
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
     "solar company Oyo State",
     "buy solar inverter Ibadan",
     "CCTV installation Ibadan",
+    "solar refrigerator and freezer Nigeria",
+    "deep cycle battery Ibadan",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
@@ -37,7 +40,8 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     title: titleDefault,
-    description: site.description,
+    description:
+    "Palmtree Technology Services (Palmtree Solar Master) — solar installation, solar panels, inverters, batteries, solar products and CCTV in Ibadan, serving all of Nigeria.",
     images: [
       {
         url: "/images/og/palmtree-og.jpg",
@@ -50,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: titleDefault,
-    description: site.description,
+    description:
+    "Palmtree Technology Services (Palmtree Solar Master) — solar installation, solar panels, inverters, batteries, solar products and CCTV in Ibadan, serving all of Nigeria.",
     images: ["/images/og/palmtree-og.jpg"],
   },
   robots: {
@@ -79,7 +84,8 @@ const organisationSchema = {
   "@type": ["LocalBusiness", "Electrician"],
   name: site.name,
   alternateName: site.brandAlt,
-  description: site.description,
+  description:
+    "Palmtree Technology Services (Palmtree Solar Master) — solar installation, solar panels, inverters, batteries, solar products and CCTV in Ibadan, serving all of Nigeria.",
   url: site.url,
   telephone: site.phoneTel,
   email: site.email,

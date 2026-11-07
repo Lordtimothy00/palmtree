@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { contactSchema, quoteSchema } from "@/lib/validation";
+import { contactSchema, enquirySchema, quoteSchema } from "@/lib/validation";
 import { deliverEnquiry, type EnquiryPayload } from "@/lib/mailer";
 
 // Very simple in-memory rate limit (per instance) to discourage form spam.
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
   }
 
   const kind = (json as { kind?: string })?.kind;
-  if (kind !== "quote" && kind !== "contact") {
+  if (kind !== "quote" && kind !== "contact" && kind !== "enquiry") {
     return NextResponse.json(
       { status: "error", message: "Unknown enquiry type." },
       { status: 400 },
@@ -56,7 +56,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ status: "success" });
   }
   const parsed =
-    kind === "quote" ? quoteSchema.safeParse(raw) : contactSchema.safeParse(raw);
+    kind === "quote"
+      ? quoteSchema.safeParse(raw)
+      : kind === "contact"
+        ? contactSchema.safeParse(raw)
+        : enquirySchema.safeParse(raw);
 
   if (!parsed.success) {
     return NextResponse.json(

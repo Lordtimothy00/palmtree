@@ -15,7 +15,7 @@
  */
 
 export type EnquiryPayload = {
-  kind: "quote" | "contact" | "training";
+  kind: "quote" | "contact" | "training" | "enquiry";
   submittedAt: string;
   fields: Record<string, string | boolean | undefined>;
 };
