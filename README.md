@@ -106,8 +106,28 @@ Configure delivery with environment variables (see `.env.example`):
 | `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical origin used for metadata, sitemap and Open Graph |
 
 Delivery order: **Resend → webhook → local JSONL log** (`data/enquiries.jsonl`, git-ignored).
-The local log exists so nothing is lost while credentials are being set up; it is not a
-substitute for configuring email before launch.
+
+The JSONL log is a **development-only** convenience. In production it is disabled, because
+serverless hosts such as Vercel have a read-only filesystem and discard `/tmp` between
+invocations — writing there and returning success would tell the visitor their message
+arrived while the enquiry quietly vanished. With no channel configured, a production
+deployment fails closed: the API returns `502` and the form points the visitor to WhatsApp
+and the phone number. **Set `RESEND_API_KEY` (or `ENQUIRY_WEBHOOK_URL`) before launch** so
+enquiries reach `palmtreeng@gmail.com`.
+
+## Deployment
+
+Hosted on Vercel as the project `palmtree`, building from the `main` branch.
+
+1. Import `Lordtimothy00/palmtree` at [vercel.com/new](https://vercel.com/new) (the GitHub
+   integration must be installed on the Vercel account first).
+2. Framework preset **Next.js**, no build or output overrides needed.
+3. Add `NEXT_PUBLIC_SITE_URL` pointing at the live domain, plus `RESEND_API_KEY` and
+   `ENQUIRY_FROM_EMAIL` for form delivery.
+4. Point the domain at Vercel once DNS is ready.
+
+`/` , `/robots.txt` and `/sitemap.xml` are static; `/api/enquiry` is the only server
+function.
 
 ## WhatsApp
 
