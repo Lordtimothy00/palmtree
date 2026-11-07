@@ -137,7 +137,7 @@ export const products: Product[] = [
   },
   {
     slug: "solar-refrigerators",
-    name: "Solar Refrigerators and Freezers",
+    name: "Solar Refrigerators",
     category: "Appliances",
     description: "Refrigerators built to run directly from solar power.",
     image: "/images/company/product-refrigerators.jpg",
