@@ -137,7 +137,24 @@ export async function deliverEnquiry(payload: EnquiryPayload): Promise<DeliveryR
     }
   }
 
-  // 3. Local durable log (development / pre-configuration)
+  // 3. Local log — development only.
+  //
+  // On a serverless host (Vercel and friends) the filesystem is read-only, and
+  // even a writable /tmp is wiped between invocations. Writing there and
+  // reporting success would show the visitor "message received" while the
+  // enquiry quietly evaporated. In production we therefore fail closed: the
+  // form tells the visitor to use WhatsApp or the phone number instead, and the
+  // lead is not lost. Configure RESEND_API_KEY or ENQUIRY_WEBHOOK_URL before
+  // going live.
+  if (process.env.NODE_ENV === "production") {
+    return {
+      ok: false,
+      channel: "none",
+      detail:
+        "No enquiry delivery channel is configured in production. Set RESEND_API_KEY or ENQUIRY_WEBHOOK_URL.",
+    };
+  }
+
   try {
     const { appendFile, mkdir } = await import("node:fs/promises");
     const path = await import("node:path");

@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { contactSchema, enquirySchema, quoteSchema } from "@/lib/validation";
 import { deliverEnquiry, type EnquiryPayload } from "@/lib/mailer";
+import { site } from "@/lib/site";
+
+const SITE_PHONE = site.phoneDisplay;
 
 // Very simple in-memory rate limit (per instance) to discourage form spam.
 const hits = new Map<string, { count: number; reset: number }>();
@@ -99,8 +102,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         status: "fallback",
-        message:
-          "We could not deliver your enquiry automatically. Please message us on WhatsApp or call 0805 127 0913 so we do not miss you.",
+        message: `Our automatic enquiry service is unavailable right now, so your message was not sent. Please reach us directly instead — or call ${SITE_PHONE}.`,
       },
       { status: 502 },
     );
