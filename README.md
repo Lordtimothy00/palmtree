@@ -44,9 +44,28 @@ npm start        # serve the production build
 Tokens live in `app/globals.css` under `@theme`. Fonts are **Sora** (display) and
 **Plus Jakarta Sans** (body), self-hosted through `@fontsource-variable`.
 
-The logo is a hand-built SVG lockup — `public/brand/logo-mark.svg` (dark) and
-`logo-mark-light.svg` (on dark). Replace those two files with the supplied company
-logo artwork and the header, footer and training section pick it up automatically.
+### Logo assets
+
+The brand lockup uses the company's **authentic emblem** — the yellow gear enclosing
+the CCTV camera, solar panel, wrench, gear and hard hat, crossed by two green palm
+leaves — extracted from the supplied logo file with a transparent background.
+
+| File | Purpose |
+| ---- | ------- |
+| `public/brand/emblem.png` | Transparent emblem used in the header, footer and training card |
+| `public/brand/icon-512.png` | Square icon for structured data / PWA |
+| `public/brand/apple-touch-icon.png` | 180px opaque iOS icon |
+| `public/brand/favicon.ico` + `favicon-64.png` | Browser tab icons |
+| `public/brand/source/logo-original.jpg` | The original supplied artwork, kept for reference |
+
+The wordmark is set in live text beside the emblem — **PALM** in navy, **TREE** in
+green, with "TECHNOLOGY SERVICES" beneath — so it stays crisp at every size. If the
+full 3D wordmark artwork is ever preferred instead, swap the `Logo` component's
+wordmark block for an image.
+
+The source file is a 3D render on a cream background. To swap in a cleaner master
+artwork later, export it on a transparent PNG and overwrite `emblem.png` with the
+same 1.72:1 aspect ratio.
 
 ## Business information
 

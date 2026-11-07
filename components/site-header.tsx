@@ -93,7 +93,13 @@ export function SiteHeader() {
             aria-label={`${site.name} — home`}
             className="shrink-0 rounded-lg py-1"
           >
-            <Logo size={40} priority />
+            {/* Emblem is hidden on the very smallest screens; the wordmark carries the brand. */}
+            <span className="sm:hidden">
+              <Logo size={34} priority showEmblem={false} />
+            </span>
+            <span className="hidden sm:inline-flex">
+              <Logo size={40} priority />
+            </span>
           </Link>
 
           <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">

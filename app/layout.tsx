@@ -60,8 +60,11 @@ export const metadata: Metadata = {
   },
   category: "Solar Energy",
   icons: {
-    icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/brand/apple-touch-icon.png" }],
+    icon: [
+      { url: "/brand/favicon.ico", sizes: "any" },
+      { url: "/brand/favicon-64.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
@@ -81,7 +84,7 @@ const organisationSchema = {
   telephone: site.phoneTel,
   email: site.email,
   image: `${site.url}/images/og/palmtree-og.jpg`,
-  logo: `${site.url}/brand/logo-mark.svg`,
+  logo: `${site.url}/brand/icon-512.png`,
   sameAs: [site.facebook],
   address: {
     "@type": "PostalAddress",

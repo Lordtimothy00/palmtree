@@ -76,15 +76,16 @@ export function TrainingPromo() {
                   Palmtree Solar Master
                 </p>
               </div>
-              <Image
-                src="/brand/logo-mark-light.svg"
-                alt=""
-                width={40}
-                height={40}
-                unoptimized
-                className="size-10 shrink-0 rounded-xl"
-                aria-hidden="true"
-              />
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-white p-1.5">
+                <Image
+                  src="/brand/emblem.png"
+                  alt=""
+                  width={64}
+                  height={37}
+                  className="h-full w-full object-contain"
+                  aria-hidden="true"
+                />
+              </span>
             </div>
           </div>
         </Reveal>
