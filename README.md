@@ -167,6 +167,12 @@ does list CCTV, using a crowd photo for that card would have been misleading.
 Replace these two files with real camera installation photos when available —
 they are the only non-company images on the site.
 
+**Electric fence wire** is the one service without a photograph of its own. No
+supplied image shows fence wire, and an unrelated photo would misrepresent the
+work, so `service-electric-fence-wire` currently borrows
+`service-battery.jpg`. Supply a real fence installation photo and point that
+service's `image` at it in `lib/content.ts`.
+
 ## Project structure
 
 ```
