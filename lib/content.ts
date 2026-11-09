@@ -61,7 +61,7 @@ export const services: Service[] = [
       "Electric fence wire supplied and installed to protect your perimeter.",
     image: "/images/company/service-electric-fence-wire.jpg",
     imageAlt:
-      "Galvanised electric fence wire on a spool with ceramic insulators and a tension spring",
+      "Electric fence wires on ceramic insulators above a perimeter wall, with a yellow DANGER ELECTRIC FENCE sign",
     icon: "fence",
   },
   {

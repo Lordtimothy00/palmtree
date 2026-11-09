@@ -158,20 +158,20 @@ Almost every photograph on the site is the company's own, supplied directly:
   own showroom.
 - **Training** — Palmtree Solar Master cohorts, including one gathered outside
   the shop under the company signboard.
+- **Electric fence** — a fence run on ceramic insulators above a perimeter
+  wall, with a DANGER ELECTRIC FENCE sign (`service-electric-fence-wire.jpg`).
 - **The shop** — the Academy–Monatan Road premises and its signboard.
 
-**Three exceptions, all generated:** `service-cctv.jpg`,
-`product-cctv-cameras.jpg` and `service-electric-fence-wire.jpg` are
-AI-generated product shots — a dome security camera, and galvanised fence wire
-with ceramic insulators and a tension spring. No photograph of the company's
-own CCTV or fence work was supplied, and an unrelated photo would have
-misrepresented the work.
+**Two exceptions, both generated:** `service-cctv.jpg` and
+`product-cctv-cameras.jpg` are AI-generated studio shots of a dome security
+camera. No photograph of the company's own CCTV installations was supplied, and
+an unrelated photo would have misrepresented the work.
 
-These three are presentation images, not photographs of Palmtree's own jobs,
-and they are deliberately styled as neutral studio product shots rather than
-site photographs so nobody mistakes them for a completed installation. Replace
-them with real photos when available and point each service's `image` at the
-new file in `lib/content.ts`.
+They are presentation images, not photographs of Palmtree's own jobs, and are
+deliberately styled as neutral studio product shots rather than site
+photographs so nobody mistakes them for a completed installation. Replace them
+with real photos when available and point the service's `image` at the new file
+in `lib/content.ts`.
 
 ## Project structure
 
