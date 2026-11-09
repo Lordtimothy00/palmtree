@@ -15,11 +15,10 @@ import { site, whatsappLink } from "@/lib/site";
 
 const interests = [
   "Solar Installation",
-  "Inverter Installation",
-  "Battery Supply and Installation",
-  "Solar Products",
-  "CCTV and Security Technology",
-  "Solar Training",
+  "Sales of Solar Products",
+  "CCTV",
+  "Electric Fence Wire",
+  "Training",
   "Not sure yet — please advise",
 ];
 

@@ -25,7 +25,7 @@ scroll to sections.
 | Section | Anchor | Contents |
 | ------- | ------ | -------- |
 | Hero | `#home` | Headline, description, Get a Quote / Chat on WhatsApp |
-| Services | `#services` | Six service cards with photography and WhatsApp enquiry |
+| Services | `#services` | Five service cards with photography and WhatsApp enquiry |
 | Products | `#products` | Eight product cards, each with a WhatsApp enquiry naming the product |
 | About | `#about` | Company description, shop photograph, what we do |
 | Contact | `#contact` | Phone, email, address, service area, hours, enquiry form, map |
@@ -86,7 +86,9 @@ All contact details, links and pre-filled WhatsApp messages are centralised in
 **`lib/site.ts`**. Change the phone number, address or email there once and it
 updates across the whole site, including the structured data.
 
-Content (services, products, projects, programmes) lives in **`lib/data.ts`**.
+Content — the service list, product list and every image caption — lives in
+**`lib/content.ts`**. The enquiry form's "What do you need?" options in
+`components/forms/enquiry-form.tsx` mirror the service list, so update both together.
 
 ## Enquiry delivery
 
@@ -170,19 +172,22 @@ they are the only non-company images on the site.
 ```
 app/
   layout.tsx            Root layout, metadata, JSON-LD, header/footer
-  page.tsx              Home
-  about|services|products|projects|training|contact/page.tsx
+  page.tsx              The single page (all sections)
   api/enquiry/route.ts  Enquiry endpoint
-  robots.ts sitemap.ts not-found.tsx
+  robots.ts sitemap.ts not-found.tsx globals.css
 components/
-  site-header.tsx site-footer.tsx whatsapp-float.tsx logo.tsx
-  product-card.tsx project-gallery.tsx lightbox.tsx page-hero.tsx cta-band.tsx
-  forms/                quote, contact, training forms + field primitives
-  home/                 home page sections
+  site-header.tsx site-footer.tsx whatsapp-float.tsx logo.tsx reveal.tsx
+  sections/             hero, services, products, about, contact
+  forms/                enquiry-form + field primitives
   ui/                   button, section heading primitives
+  icons/                social icons
 lib/
   site.ts               Business config + WhatsApp helpers
-  data.ts               Services, products, projects, programmes
+  content.ts            Services, products and image captions
   validation.ts         Zod schemas
-  mailer.ts             Delivery (Resend → webhook → log)
+  mailer.ts             Resend / webhook / dev-log delivery
+public/
+  brand/                Logo, favicons, app icons
+  images/company/       The company's own photographs
+  images/og/            Social preview image
 ```

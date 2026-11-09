@@ -11,7 +11,7 @@ export type Service = {
   image: string;
   imageAlt: string;
   /** Lucide icon name, resolved in components/sections/services.tsx */
-  icon: "sun" | "inverter" | "battery" | "packages" | "cctv" | "graduation";
+  icon: "sun" | "packages" | "cctv" | "fence" | "graduation";
 };
 
 export type Product = {
@@ -35,48 +35,38 @@ export const services: Service[] = [
     icon: "sun",
   },
   {
-    slug: "inverter-installation",
-    title: "Inverter Installation",
+    slug: "sales-of-solar-products",
+    title: "Sales of Solar Products",
     description:
-      "Solar and hybrid inverters installed, configured and cabled for a dependable changeover.",
-    image: "/images/company/service-inverter.jpg",
-    imageAlt:
-      "Wall-mounted inverters, changeover switch and a bank of red batteries installed in a utility corner",
-    icon: "inverter",
-  },
-  {
-    slug: "battery-supply-and-installation",
-    title: "Battery Supply and Installation",
-    description:
-      "Lithium and tubular batteries supplied and installed in safe, properly protected banks.",
-    image: "/images/company/service-battery.jpg",
-    imageAlt:
-      "Tubular battery installed on a stand beneath an intelligent power inverter",
-    icon: "battery",
-  },
-  {
-    slug: "solar-products",
-    title: "Solar Products",
-    description:
-      "Panels, inverters, batteries, fans, fridges and home systems available for supply and installation.",
+      "Panels, inverters, batteries, fans, fridges and freezers supplied from our Ibadan showroom.",
     image: "/images/company/service-products.jpg",
     imageAlt:
       "Solar home system with panel, lithium battery box, fan, refrigerator, freezer and television",
     icon: "packages",
   },
   {
-    slug: "cctv-and-security",
-    title: "CCTV and Security Technology",
+    slug: "cctv",
+    title: "CCTV",
     description:
-      "Camera and security installations alongside your solar setup — one team for both.",
+      "Camera and security installations for homes and businesses — alongside your solar setup or on its own.",
     image: "/images/company/service-cctv.jpg",
     imageAlt:
       "White dome CCTV security camera photographed in the studio",
     icon: "cctv",
   },
   {
-    slug: "solar-training",
-    title: "Solar Training",
+    slug: "electric-fence-wire",
+    title: "Electric Fence Wire",
+    description:
+      "Electric fence wire supplied and installed to protect your perimeter.",
+    image: "/images/company/service-battery.jpg",
+    imageAlt:
+      "Tubular battery installed on a stand beneath an intelligent power inverter",
+    icon: "fence",
+  },
+  {
+    slug: "training",
+    title: "Training",
     description:
       "Practical solar training at Palmtree Solar Master — hands-on sessions with the equipment.",
     image: "/images/company/service-training.jpg",

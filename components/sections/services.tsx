@@ -1,25 +1,24 @@
 import Image from "next/image";
 import {
   ArrowUpRight,
-  BatteryCharging,
   Cctv,
+  Fence,
   GraduationCap,
   MessageCircle,
   Package,
-  PlugZap,
   Sun,
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/ui/section";
 import { services, type Service } from "@/lib/content";
+import { cn } from "@/lib/utils";
 import { serviceEnquiryMessage, whatsappLink } from "@/lib/site";
 
 const icons: Record<Service["icon"], typeof Sun> = {
   sun: Sun,
-  inverter: PlugZap,
-  battery: BatteryCharging,
   packages: Package,
   cctv: Cctv,
+  fence: Fence,
   graduation: GraduationCap,
 };
 
@@ -30,16 +29,28 @@ export function Services() {
         <Reveal>
           <SectionHeading
             eyebrow="What we do"
-            title="Services built around reliable power"
-            intro="Installation, equipment and technical support — handled by the same team from first visit to handover."
+            title="Solar, security and technical services"
+            intro="Power, security and training — handled by the same team from first visit to handover."
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:[grid-template-columns:repeat(6,minmax(0,1fr))]">
           {services.map((service, i) => {
             const Icon = icons[service.icon];
+            const isLastOdd =
+              i === services.length - 1 && services.length % 2 === 1;
             return (
-              <Reveal key={service.slug} delay={i * 60}>
+              <Reveal
+                key={service.slug}
+                delay={i * 60}
+                className={cn(
+                  "lg:col-span-2",
+                  // Five cards over a 6-track grid: centre the odd last one
+                  // instead of leaving it stranded at the start of a new row.
+                  isLastOdd &&
+                    "sm:col-span-2 sm:mx-auto sm:w-full sm:max-w-md lg:col-start-3 lg:max-w-none",
+                )}
+              >
                 <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy-700/8 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
                   <div className="zoom-media relative aspect-[4/3] overflow-hidden bg-navy-700">
                     <Image
