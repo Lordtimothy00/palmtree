@@ -59,9 +59,9 @@ export const services: Service[] = [
     title: "Electric Fence Wire",
     description:
       "Electric fence wire supplied and installed to protect your perimeter.",
-    image: "/images/company/service-battery.jpg",
+    image: "/images/company/service-electric-fence-wire.jpg",
     imageAlt:
-      "Tubular battery installed on a stand beneath an intelligent power inverter",
+      "Galvanised electric fence wire on a spool with ceramic insulators and a tension spring",
     icon: "fence",
   },
   {
