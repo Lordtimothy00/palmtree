@@ -17,8 +17,8 @@ export function SiteFooter() {
       <div className="container-page py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1.2fr]">
           <div>
-            <span className="inline-flex rounded-xl bg-white px-3 py-2">
-              <Logo size={34} />
+            <span className="inline-flex rounded-xl bg-white px-4 py-2.5">
+              <Logo size={46} />
             </span>
             <p className="mt-5 max-w-xs text-[13.5px] leading-relaxed text-white/60">
               Solar installations, inverters, batteries and solar products —

@@ -25,7 +25,7 @@ const points = [
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 bg-mist py-20 md:py-28">
+    <section id="about" className="scroll-mt-28 bg-mist py-20 md:py-28">
       <div className="container-page">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>

@@ -60,18 +60,20 @@ export function SiteHeader() {
           : "bg-white"
       }`}
     >
-      <div className="container-page flex h-[72px] items-center justify-between gap-4">
+      <div className="container-page flex h-[76px] items-center justify-between gap-4 md:h-[92px]">
         <a
           href="#home"
           aria-label={`${site.name} — back to top`}
           className="shrink-0 rounded-lg py-1"
           onClick={close}
         >
-          <span className="sm:hidden">
-            <Logo size={30} priority />
+          {/* The tall lockup and the taller header row switch on together at md,
+              so the logo never crowds a 76px row. */}
+          <span className="md:hidden">
+            <Logo size={40} priority />
           </span>
-          <span className="hidden sm:inline-flex">
-            <Logo size={38} priority />
+          <span className="hidden md:inline-flex">
+            <Logo size={58} priority />
           </span>
         </a>
 

@@ -45,7 +45,7 @@ const channels = [
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 bg-white py-20 md:py-28">
+    <section id="contact" className="scroll-mt-28 bg-white py-20 md:py-28">
       <div className="container-page">
         <Reveal>
           <SectionHeading

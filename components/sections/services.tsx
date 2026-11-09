@@ -24,7 +24,7 @@ const icons: Record<Service["icon"], typeof Sun> = {
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-mist py-20 md:py-28">
+    <section id="services" className="scroll-mt-28 bg-mist py-20 md:py-28">
       <div className="container-page">
         <Reveal>
           <SectionHeading

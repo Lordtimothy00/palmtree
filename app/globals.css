@@ -60,8 +60,9 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    /* Sticky header offset for in-page anchors */
-    scroll-padding-top: 6rem;
+    /* Sticky header offset for in-page anchors. The header is 76px on small
+       screens and 92px from md up, so keep clear of the taller of the two. */
+    scroll-padding-top: 6.5rem;
   }
 
   body {
