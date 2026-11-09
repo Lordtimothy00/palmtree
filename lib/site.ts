@@ -8,7 +8,7 @@ export const site = {
   name: "Palmtree Technology Services",
   shortName: "Palmtree",
   brandAlt: "Palmtree Solar Master",
-  tagline: "Reliable Solar Energy. Power Without Limits.",
+  tagline: "Solar Energy · Security · Training",
   description:
     "Palmtree Technology Services is a Nigerian solar energy and technology company delivering solar installation, inverters, batteries, solar products, CCTV and practical solar training to homes and businesses nationwide.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.palmtreetechservices.com",

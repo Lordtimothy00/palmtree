@@ -30,11 +30,11 @@ export function Hero() {
             Ibadan · Serving all of Nigeria
           </span>
 
-          <h1 className="mt-6 text-balance text-[clamp(2.15rem,5.4vw,3.9rem)] font-semibold leading-[1.04] tracking-[-0.035em] text-white">
-            Reliable Solar Energy.
-            <span className="mt-1 block text-solar-400">
-              Power Without Limits.
-            </span>
+          {/* The company name carries the hero, coloured like the logo:
+              PALMTREE white, TECHNOLOGY SERVICES in solar yellow. */}
+          <h1 className="mt-6 text-balance text-[clamp(2.1rem,5.2vw,3.8rem)] font-semibold leading-[1.05] tracking-[-0.035em] text-white">
+            Palmtree Technology
+            <span className="mt-1 block text-solar-400">Services</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/80 md:text-[17px]">
