@@ -60,7 +60,7 @@ export function SiteHeader() {
           : "bg-white"
       }`}
     >
-      <div className="container-page flex h-[76px] items-center justify-between gap-4 md:h-[92px]">
+      <div className="container-page flex h-[80px] items-center justify-between gap-3 md:h-[92px] md:gap-4">
         <a
           href="#home"
           aria-label={`${site.name} — back to top`}
@@ -70,7 +70,11 @@ export function SiteHeader() {
           {/* The tall lockup and the taller header row switch on together at md,
               so the logo never crowds a 76px row. */}
           <span className="md:hidden">
-            <Logo size={40} priority />
+            {/* Phones keep the emblem and the live-text wordmark rather than the
+                full artwork: at 165px wide on a phone the artwork's fine detail
+                turns to mush and its small caps are unreadable. This pairing is
+                crisp at any density and stays legible. */}
+            <Logo size={44} priority layout="stacked" />
           </span>
           <span className="hidden md:inline-flex">
             <Logo size={58} priority />
@@ -116,7 +120,7 @@ export function SiteHeader() {
           <a
             href={`tel:${site.phoneTel}`}
             aria-label={`Call ${site.phoneDisplay}`}
-            className="flex size-10 items-center justify-center rounded-xl border border-navy-700/12 text-navy-700 transition hover:border-forest-700/30 hover:text-forest-700 sm:hidden"
+            className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-navy-700/12 text-navy-700 transition hover:border-forest-700/30 hover:text-forest-700 sm:hidden"
           >
             <Phone className="size-4" aria-hidden="true" />
           </a>
@@ -126,7 +130,7 @@ export function SiteHeader() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="flex size-10 items-center justify-center rounded-xl border border-navy-700/12 text-navy-700 transition hover:border-forest-700/30 hover:text-forest-700 lg:hidden"
+            className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-navy-700/12 text-navy-700 transition hover:border-forest-700/30 hover:text-forest-700 lg:hidden"
           >
             {open ? (
               <X className="size-5" aria-hidden="true" />

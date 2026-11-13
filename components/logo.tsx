@@ -82,7 +82,7 @@ export function Logo({
         >
           <span
             className="font-display font-extrabold tracking-[-0.02em]"
-            style={{ fontSize: Math.max(15, size * 0.42) }}
+            style={{ fontSize: Math.max(17, size * 0.42) }}
           >
             <span className={isLight ? "text-white" : "text-navy-700"}>PALM</span>
             <span className={isLight ? "text-forest-300" : "text-forest-700"}>
@@ -94,8 +94,10 @@ export function Logo({
               isLight ? "text-white/70" : "text-navy-700/70"
             }`}
             style={{
-              fontSize: Math.max(7.5, size * 0.185),
-              letterSpacing: "0.11em",
+              // 7.5px was unreadable on a phone. Keep the subtitle legible
+              // and let the lockup take the width it needs.
+              fontSize: Math.max(9, size * 0.19),
+              letterSpacing: "0.09em",
             }}
           >
             Technology Services
