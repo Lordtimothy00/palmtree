@@ -22,6 +22,15 @@ export type Service = {
   nationwide?: boolean;
 };
 
+/** One kind within a product category, e.g. "hybrid inverter". */
+export type ProductVariant = {
+  label: string;
+  /** What it actually does, in plain language. */
+  summary: string;
+  /** Who it suits. */
+  suits: string;
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -35,6 +44,12 @@ export type Product = {
   detail: string[];
   /** Things to know before choosing. No model names, specs or prices invented. */
   chooseBecause: string[];
+  /** Optional: the distinct kinds of this product, explained one by one. */
+  variants?: ProductVariant[];
+  /** Optional intro shown above the variants. */
+  variantsIntro?: string;
+  /** Optional second axis worth knowing about, rendered as a note. */
+  aside?: { title: string; body: string };
   /** Which service page covers installing it. */
   installService: string;
 };
@@ -279,6 +294,49 @@ export const products: Product[] = [
       "Your current inverter has failed or is undersized",
       "You need the changeover wired in properly",
     ],
+    variantsIntro:
+      "Inverters are not one thing. Which kind you need depends on whether you have panels, whether you want to feed power back, and how much load you expect to run at once.",
+    variants: [
+      {
+        label: "Square wave / modified sine wave",
+        summary:
+          "The cheapest and most basic output. The waveform is a rough approximation of mains power rather than a smooth copy of it.",
+        suits:
+          "Simple loads only — basic lighting, fans and similar. Motors and anything with a sensitive power supply can run hot, buzz, or fail early on this output.",
+      },
+      {
+        label: "Pure sine wave",
+        summary:
+          "Output that closely matches what the grid supplies, so appliances behave the way they do on mains power.",
+        suits:
+          "Nearly everything people actually want to run — fridges, freezers, TVs, computers, medical equipment, anything with a motor or a circuit board in it.",
+      },
+      {
+        label: "Off-grid inverter",
+        summary:
+          "Takes its power from panels and batteries only. It has no relationship with the grid at all, so it keeps running when the area has no supply.",
+        suits:
+          "Buildings with no grid connection, or where the grid is too unreliable to be worth designing around.",
+      },
+      {
+        label: "Hybrid inverter",
+        summary:
+          "Connects to panels, batteries and the grid together, and decides which source to draw from. Some models can also charge batteries from the grid when solar is low.",
+        suits:
+          "Most homes and businesses in Nigeria — you keep the grid as a backup rather than choosing between grid and solar.",
+      },
+      {
+        label: "Grid-tie inverter",
+        summary:
+          "Runs in step with the grid and can send surplus power back into it. It normally has no battery bank, so it stops when the grid goes down.",
+        suits:
+          "Sites where the grid is steady and the aim is to cut the bill rather than to have backup. It is not a solution to outages.",
+      },
+    ],
+    aside: {
+      title: "Size is set by load, not by battery",
+      body: "Pick the inverter by the total you expect to run at the same time — not by the size of your battery bank. An inverter that is too small trips out every time the fridge and the freezer start together; one that is far too large wastes money. List the appliances you want to run, add up what they draw, and size from that.",
+    },
     installService: "solar-installation",
   },
   {

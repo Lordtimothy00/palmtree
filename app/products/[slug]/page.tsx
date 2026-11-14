@@ -151,6 +151,65 @@ export default async function ProductPage({ params }: Params) {
               ))}
             </div>
 
+            {product.variants && product.variants.length > 0 && (
+              <>
+                <h2
+                  id="types"
+                  className="mt-12 text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-tight text-navy-700"
+                >
+                  Types of {product.name.toLowerCase()}
+                </h2>
+                {product.variantsIntro && (
+                  <p className="mt-4 max-w-2xl text-[14.5px] leading-relaxed text-navy-700/70">
+                    {product.variantsIntro}
+                  </p>
+                )}
+
+                <dl className="mt-7 space-y-3">
+                  {product.variants.map((variant, i) => (
+                    <div
+                      key={variant.label}
+                      className="rounded-2xl border border-navy-700/8 bg-white p-5 shadow-soft transition-colors hover:border-forest-700/25"
+                    >
+                      <dt className="flex items-start gap-3">
+                        <span
+                          className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-forest-50 text-[11.5px] font-bold text-forest-700"
+                          aria-hidden="true"
+                        >
+                          {i + 1}
+                        </span>
+                        <span className="font-display text-[15px] font-semibold text-navy-700">
+                          {variant.label}
+                        </span>
+                      </dt>
+                      <dd className="mt-2 space-y-2 pl-9">
+                        <p className="text-[13.5px] leading-relaxed text-navy-700/75">
+                          {variant.summary}
+                        </p>
+                        <p className="text-[13px] leading-relaxed text-navy-700/60">
+                          <span className="font-semibold text-forest-700">
+                            Best for:
+                          </span>{" "}
+                          {variant.suits}
+                        </p>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                {product.aside && (
+                  <div className="mt-6 rounded-2xl border-l-[3px] border-solar-400 bg-solar-50/60 p-5">
+                    <h3 className="font-display text-[14px] font-semibold text-navy-700">
+                      {product.aside.title}
+                    </h3>
+                    <p className="mt-2 text-[13.5px] leading-relaxed text-navy-700/70">
+                      {product.aside.body}
+                    </p>
+                  </div>
+                )}
+              </>
+            )}
+
             <h2 className="mt-12 text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-tight text-navy-700">
               It is the right choice when
             </h2>
