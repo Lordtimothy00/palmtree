@@ -40,7 +40,9 @@ A product page can carry a `variants` array, which renders as a numbered
 `/products/batteries` (tubular, sealed lead-acid, lithium) and
 `/products/charge-controllers` (PWM, MPPT) and `/products/cctv-cameras` (dome,
 bullet, PTZ, analog, IP) and `/products/solar-panels` (monocrystalline,
-polycrystalline, thin film, roof-mounted, ground-mounted). Variants can each
+polycrystalline, thin film, roof-mounted, ground-mounted) and
+`/products/solar-fans` (standing, ceiling, table/rechargeable, wall-mounted,
+exhaust). Variants can each
 carry their own photo. Battery types deliberately are **not** separate product
 cards or pages; they are types within one page, and the old
 `/products/lithium-batteries` and `/products/deep-cycle-batteries` URLs

@@ -506,6 +506,49 @@ export const products: Product[] = [
       "You are putting together a first, small solar setup",
       "You are fitting out a shop or room on limited power",
     ],
+    variantsIntro:
+      "Fans differ mainly in how they are powered and how they are mounted. The first question is whether yours has its own panel and battery built in or draws on the system you already have.",
+    variants: [
+      {
+        label: "Standing fan (pedestal)",
+        summary:
+          "The familiar free-standing fan on a pole, with a base to move around the room. Most home solar fans are this shape, and the better ones carry a small built-in battery and panel so they run whether or not the house system is on.",
+        suits:
+          "Living rooms and bedrooms, and anywhere you want to be able to move the airflow to wherever you are sitting.",
+      },
+      {
+        label: "Ceiling fan",
+        summary:
+          "Mounted overhead, so it cools the whole room rather than one seat, and it takes up no floor or table space. Fitting one means mounting it to the ceiling and wiring it in.",
+        suits:
+          "Rooms where you want even cooling and floor space back, and where the installation can be done properly rather than hung from what happens to be there.",
+      },
+      {
+        label: "Table and rechargeable fans",
+        summary:
+          "Small units that sit on a surface, usually with a built-in battery charged from the mains or a panel. Often they can also run while charging, so an outage does not stop them.",
+        suits:
+          "A desk, a bedside, a shop counter — one person's airflow, and a cheap way to find out how useful a solar fan is before buying more.",
+      },
+      {
+        label: "Wall-mounted fan",
+        summary:
+          "Fixed to the wall on a bracket and usually oscillating, so it covers an area without taking floor or table space.",
+        suits:
+          "Shops, workshops, corridors and small rooms where floor space is doing other work.",
+      },
+      {
+        label: "Exhaust and ventilation fan",
+        summary:
+          "Moves hot or stale air out of a space rather than blowing air around inside it. Usually fitted into a wall or window opening.",
+        suits:
+          "Kitchens, stores and rooms that get stuffy, rather than rooms where you want air moving across you.",
+      },
+    ],
+    aside: {
+      title: "A fan draws a fraction of what an air conditioner does",
+      body: "The reason solar fans work on small systems is that cooling a person with moving air takes far less power than cooling the whole room with a compressor. That gap is what decides whether a modest battery bank lasts the night or is flat by ten. If the aim is to sleep comfortably through an outage, a fan on a small system is often the more realistic answer than an air conditioner on a large one.",
+    },
     installService: "sales-of-solar-products",
   },
   {
