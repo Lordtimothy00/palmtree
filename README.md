@@ -35,15 +35,14 @@ via `generateStaticParams`, so adding one means adding a single object to the
 `services` or `products` array — the index, detail page, sitemap, footer and
 header all pick it up.
 
-A product **or service** page can carry a `variants` array, which renders as a numbered
+A product page can carry a `variants` array, which renders as a numbered
 "Types of …" section — used on `/products/inverters` (five kinds) and
 `/products/batteries` (tubular, sealed lead-acid, lithium) and
 `/products/charge-controllers` (PWM, MPPT) and `/products/cctv-cameras` (dome,
 bullet, PTZ, analog, IP) and `/products/solar-panels` (monocrystalline,
 polycrystalline, thin film, roof-mounted, ground-mounted) and
 `/products/solar-fans` (standing, ceiling, table/rechargeable, wall-mounted,
-exhaust). On the service side, `/services/electric-fence-wire` uses the same
-mechanism for energiser and mounting types. Variants can each
+exhaust). Variants can each
 carry their own photo. Battery types deliberately are **not** separate product
 cards or pages; they are types within one page, and the old
 `/products/lithium-batteries` and `/products/deep-cycle-batteries` URLs
