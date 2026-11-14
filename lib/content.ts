@@ -343,6 +343,51 @@ export const products: Product[] = [
     installService: "solar-installation",
   },
   {
+    slug: "charge-controllers",
+    name: "Charge Controllers",
+    category: "Power",
+    description: "Regulators that sit between the panels and the battery bank.",
+    image: "/images/company/product-charge-controllers.jpg",
+    imageAlt: "Wall-mounted solar charge controller with a blank digital display",
+    summary:
+      "The regulator between your panels and your battery that stops the panels cooking the bank and gets the most out of them.",
+    detail: [
+      "A charge controller sits between the solar panels and the battery. Panels put out whatever voltage the sunlight gives them, which is rarely the voltage the battery wants; the controller takes that raw output and turns it into a proper charge.",
+      "Just as importantly, it stops charging once the battery is full. Without one, a panel array will keep pushing current into a bank that is already at capacity, which overheats sealed batteries, boils off the water in tubular ones, and shortens the life of either.",
+      "Many hybrid inverters have a controller built in. Where the panels connect straight to an inverter that supports it, a separate unit is unnecessary — where they do not, or where you are adding panels to a system built for fewer, you need one.",
+    ],
+    chooseBecause: [
+      "You have panels charging a battery bank",
+      "Your inverter does not have a built-in solar input",
+      "You are adding panels to an existing system",
+      "Your batteries are being overcharged or never reaching full",
+      "You want more of your panel output to actually reach the battery",
+    ],
+    variantsIntro:
+      "There are two kinds, and the difference is not cosmetic: one simply switches the panel output, the other converts it. The gap between them widens as the panel voltage rises.",
+    variants: [
+      {
+        label: "PWM (pulse width modulation)",
+        summary:
+          "Switches the panel output on and off rapidly to hold the battery at the right charge level. Simple, cheap and reliable, but it works by throwing away whatever panel voltage the battery cannot use.",
+        suits:
+          "Small systems where the panel voltage closely matches the battery voltage — a single panel or two charging a 12V or 24V bank on a budget.",
+      },
+      {
+        label: "MPPT (maximum power point tracking)",
+        summary:
+          "Converts the panel's higher voltage down to the battery's voltage, turning the excess into extra charge current instead of wasting it. It also keeps searching for the best operating point as light changes.",
+        suits:
+          "Anything beyond a very small system, anything with high-voltage panels, and anything where you want more of what the panels generate to end up in the battery. It costs more than PWM and recovers more.",
+      },
+    ],
+    aside: {
+      title: "Size it in amps, and match the voltage",
+      body: "A controller is rated by the current it can handle and the system voltage it is built for, so size it from your array's output in amps — not from the panel wattage alone — and make sure the voltage matches your bank. A controller that is too small will either shut down on a bright day or fail, which is exactly when your panels were doing the most work.",
+    },
+    installService: "solar-installation",
+  },
+  {
     slug: "batteries",
     name: "Batteries",
     category: "Storage",
