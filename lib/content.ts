@@ -20,6 +20,12 @@ export type Service = {
   includes: string[];
   /** True when the work is delivered nationwide rather than in Ibadan only. */
   nationwide?: boolean;
+  /** Optional: the distinct kinds of work covered, explained one by one. */
+  variants?: ProductVariant[];
+  /** Optional intro shown above the variants. */
+  variantsIntro?: string;
+  /** Optional point worth knowing, rendered as a note. */
+  aside?: { title: string; body: string };
 };
 
 /** One kind within a product category, e.g. "hybrid inverter". */
@@ -213,6 +219,49 @@ export const services: Service[] = [
       "DANGER ELECTRIC FENCE signage",
       "Perimeter walls and fence lines",
     ],
+    variantsIntro:
+      "An electric fence is chosen by how it is energised and what it is mounted on. The differences below decide how it behaves when someone touches it, and how much maintenance it needs.",
+    variants: [
+      {
+        label: "Mains-powered energiser",
+        summary:
+          "The energiser runs from the grid and pulses the wire. The strongest and cheapest way to energise a long perimeter, because it never runs out of power.",
+        suits:
+          "Walls and fences around buildings with a reliable supply, and perimeters long enough that a battery unit would struggle to keep up.",
+      },
+      {
+        label: "Battery or solar-powered energiser",
+        summary:
+          "The energiser runs from a battery, charged by a small panel or the mains. It keeps pulsing when the grid is down, which is exactly when a perimeter tends to be tested.",
+        suits:
+          "Sites with an unreliable supply, and boundaries far from a power point. Sized by the length of the run, and it needs its battery checked from time to time.",
+      },
+      {
+        label: "Wall-top fence",
+        summary:
+          "Wires run on insulators along the top of an existing wall, so the wall carries the height and the fence adds the shock.",
+        suits:
+          "Most residential and shop perimeters in Nigeria, where a wall is already there and the weak point is someone climbing it.",
+      },
+      {
+        label: "Free-standing fence",
+        summary:
+          "Wires on their own posts, with no wall beneath. Used where there is a boundary line but no structure on it.",
+        suits:
+          "Farms, compounds and open land. Needs the posts set properly, since the fence has to hold its own tension.",
+      },
+      {
+        label: "Multiple-run versus single-run",
+        summary:
+          "Several parallel wires at different heights, or one run along the top. Multiple runs make it much harder to climb between wires; a single run is cheaper and easier to maintain.",
+        suits:
+          "Multiple runs where climbing is the real risk, single runs where the wall is high and the fence is there to deter rather than to stop.",
+      },
+    ],
+    aside: {
+      title: "An electric fence only works if it is earthed and tested",
+      body: "The shock does not come from the wire alone — it comes from current returning through the ground, so the earth rod is as much a part of the fence as the wire. A fence that has been pulled taut and looks right can be putting out almost nothing if the earth is poor, the insulators are cracked, or vegetation is shorting the line. That is why we test the voltage along the run and show you how to isolate a section, rather than leaving once the wire is up.",
+    },
   },
   {
     slug: "training",
