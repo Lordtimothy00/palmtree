@@ -1,8 +1,10 @@
+import Link from "next/link";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/social";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/ui/button";
 import { fullAddress, navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
+import { services } from "@/lib/content";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -53,12 +55,28 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-[13.5px] text-white/65 transition hover:text-white"
                   >
                     {link.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="mt-7 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-solar-300">
+              Services
+            </h2>
+            <ul className="mt-4 space-y-2.5">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="text-[13.5px] text-white/65 transition hover:text-white"
+                  >
+                    {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
+  ArrowRight,
   ArrowUpRight,
   Cctv,
   Fence,
@@ -67,7 +69,12 @@ export function Services() {
 
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="font-display text-[17px] font-semibold text-navy-700">
-                      {service.title}
+                      <Link
+                        href={`/services/${service.slug}`}
+                        className="transition hover:text-forest-700"
+                      >
+                        {service.title}
+                      </Link>
                     </h3>
                     <p className="mt-2 flex-1 text-[13.5px] leading-relaxed text-navy-700/70">
                       {service.description}
@@ -84,6 +91,13 @@ export function Services() {
                         aria-hidden="true"
                       />
                     </a>
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="mt-2 inline-flex items-center gap-1.5 text-[12.5px] font-medium text-navy-700/55 transition hover:text-forest-700"
+                    >
+                      More about this service
+                      <ArrowRight className="size-3.5" aria-hidden="true" />
+                    </Link>
                   </div>
                 </article>
               </Reveal>

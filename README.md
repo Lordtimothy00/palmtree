@@ -19,13 +19,24 @@ npm start        # serve the production build
 
 ## Pages
 
-This is a **single-page site**. Everything lives on `/` and the header links
-scroll to sections.
+The home page carries the whole pitch on one screen-scroll, and each service
+has its own page underneath it.
 
-| Section | Anchor | Contents |
-| ------- | ------ | -------- |
+| Page | URL | Contents |
+| ---- | --- | -------- |
+| Home | `/` | Hero, services, products, about, contact |
+| Services index | `/services` | The five services, each summary linking to its page |
+| Service detail | `/services/<slug>` | What the work involves, what it covers, enquiry |
+
+Service pages are pre-rendered at build time from `lib/content.ts` via
+`generateStaticParams`, so adding a service means adding one object to the
+`services` array — the index, the detail page, the sitemap and the footer all
+pick it up.
+
+| Home section | Anchor | Contents |
+| ------------ | ------ | -------- |
 | Hero | `#home` | Headline, description, Get a Quote / Chat on WhatsApp |
-| Services | `#services` | Five service cards with photography and WhatsApp enquiry |
+| Services | — | Five service cards, each linking to its own page |
 | Products | `#products` | Eight product cards, each with a WhatsApp enquiry naming the product |
 | About | `#about` | Company description, shop photograph, what we do |
 | Contact | `#contact` | Phone, email, address, service area, hours, enquiry form, map |
@@ -178,7 +189,9 @@ in `lib/content.ts`.
 ```
 app/
   layout.tsx            Root layout, metadata, JSON-LD, header/footer
-  page.tsx              The single page (all sections)
+  page.tsx              Home — all the home sections
+  services/page.tsx     Services index
+  services/[slug]/      One page per service, pre-rendered
   api/enquiry/route.ts  Enquiry endpoint
   robots.ts sitemap.ts not-found.tsx globals.css
 components/

@@ -44,8 +44,19 @@ export const fullAddress = `${site.address.line1}, ${site.address.line2}, ${site
 
 /** Single-page anchors. Order matches the page sections. */
 export const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Products", href: "/#products" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
+] as const;
+
+/**
+ * The in-page anchors on the home page. The header highlights these while a
+ * visitor scrolls, so it needs them separately from the cross-page navLinks.
+ */
+export const homeSections = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
   { label: "Products", href: "#products" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },

@@ -1,12 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, MessageCircle, Phone, X } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/ui/button";
-import { navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
+import { homeSections, navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState<string>("#home");
@@ -18,9 +20,11 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Highlight the section currently in view.
+  // Highlight the section currently in view. Only the home page has these
+  // sections, so on /services the observer simply finds nothing and no nav
+  // item is marked current.
   useEffect(() => {
-    const sections = navLinks
+    const sections = homeSections
       .map((l) => document.getElementById(l.href.slice(1)))
       .filter((el): el is HTMLElement => Boolean(el));
     if (!sections.length) return;
@@ -36,7 +40,7 @@ export function SiteHeader() {
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   // Escape dismisses the mobile sheet. The sheet is part of the page flow, not
   // an overlay, so body scroll is deliberately left alone — locking it would
@@ -51,6 +55,11 @@ export function SiteHeader() {
   }, [open]);
 
   const close = useCallback(() => setOpen(false), []);
+
+  // Navigating to a new page should never leave the mobile sheet open.
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <header
@@ -83,7 +92,12 @@ export function SiteHeader() {
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => {
-            const isActive = active === link.href;
+            const isActive =
+              link.href === "/services"
+                ? pathname === "/services" || pathname.startsWith("/services/")
+                : link.href === "/"
+                  ? pathname === "/"
+                  : pathname === "/" && active === link.href.slice(1);
             return (
               <a
                 key={link.href}
