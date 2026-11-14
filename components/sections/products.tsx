@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/ui/section";
 import { products } from "@/lib/content";
@@ -36,7 +37,12 @@ export function Products() {
 
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-display text-[15.5px] font-semibold text-navy-700">
-                    {product.name}
+                    <Link
+                      href={`/products/${product.slug}`}
+                      className="transition hover:text-forest-700"
+                    >
+                      {product.name}
+                    </Link>
                   </h3>
                   <p className="mt-1.5 flex-1 text-[13px] leading-relaxed text-navy-700/65">
                     {product.description}
@@ -59,10 +65,19 @@ export function Products() {
         </div>
 
         <Reveal delay={60}>
-          <p className="mt-8 text-center text-[13px] text-navy-700/55">
-            Availability and pricing are confirmed on enquiry — we do not list
-            prices that may be out of date.
-          </p>
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 rounded-full border border-forest-700/25 px-5 py-3 text-[13.5px] font-semibold text-forest-700 transition hover:border-forest-700/50 hover:bg-forest-50"
+            >
+              See all products explained
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+            <p className="text-center text-[13px] text-navy-700/55">
+              Availability and pricing are confirmed on enquiry — we do not list
+              prices that may be out of date.
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>

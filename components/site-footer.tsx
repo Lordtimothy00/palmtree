@@ -4,7 +4,7 @@ import { FacebookIcon } from "@/components/icons/social";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/ui/button";
 import { fullAddress, navLinks, site, whatsappLink, whatsappMessages } from "@/lib/site";
-import { services } from "@/lib/content";
+import { products, services } from "@/lib/content";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -79,6 +79,30 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+            </ul>
+
+            <h2 className="mt-7 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-solar-300">
+              Products
+            </h2>
+            <ul className="mt-4 space-y-2.5">
+              {products.slice(0, 5).map((product) => (
+                <li key={product.slug}>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="text-[13.5px] text-white/65 transition hover:text-white"
+                  >
+                    {product.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/products"
+                  className="text-[13.5px] font-semibold text-solar-300 transition hover:text-solar-200"
+                >
+                  All products
+                </Link>
+              </li>
             </ul>
           </nav>
 

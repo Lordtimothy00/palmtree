@@ -27,11 +27,18 @@ has its own page underneath it.
 | Home | `/` | Hero, services, products, about, contact |
 | Services index | `/services` | The five services, each summary linking to its page |
 | Service detail | `/services/<slug>` | What the work involves, what it covers, enquiry |
+| Products index | `/products` | All eight products, grouped by type |
+| Product detail | `/products/<slug>` | What it is, who it suits, install link, enquiry |
 
-Service pages are pre-rendered at build time from `lib/content.ts` via
-`generateStaticParams`, so adding a service means adding one object to the
-`services` array — the index, the detail page, the sitemap and the footer all
-pick it up.
+Service and product pages are pre-rendered at build time from `lib/content.ts`
+via `generateStaticParams`, so adding one means adding a single object to the
+`services` or `products` array — the index, detail page, sitemap, footer and
+header all pick it up.
+
+There are no prices, stock figures or specifications on any product page. The
+product structured data deliberately omits an `offers` block: claiming
+`InStock` would assert every item is available right now, and a price-less
+`Offer` is invalid for rich results anyway.
 
 | Home section | Anchor | Contents |
 | ------------ | ------ | -------- |
@@ -192,6 +199,8 @@ app/
   page.tsx              Home — all the home sections
   services/page.tsx     Services index
   services/[slug]/      One page per service, pre-rendered
+  products/page.tsx     Products index, grouped by category
+  products/[slug]/      One page per product, pre-rendered
   api/enquiry/route.ts  Enquiry endpoint
   robots.ts sitemap.ts not-found.tsx globals.css
 components/

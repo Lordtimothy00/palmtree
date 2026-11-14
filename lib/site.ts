@@ -46,7 +46,7 @@ export const fullAddress = `${site.address.line1}, ${site.address.line2}, ${site
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Products", href: "/#products" },
+  { label: "Products", href: "/products" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -57,7 +57,6 @@ export const navLinks = [
  */
 export const homeSections = [
   { label: "Home", href: "#home" },
-  { label: "Products", href: "#products" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ] as const;

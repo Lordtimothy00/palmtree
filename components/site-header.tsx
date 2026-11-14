@@ -95,9 +95,11 @@ export function SiteHeader() {
             const isActive =
               link.href === "/services"
                 ? pathname === "/services" || pathname.startsWith("/services/")
-                : link.href === "/"
-                  ? pathname === "/"
-                  : pathname === "/" && active === link.href.slice(1);
+                : link.href === "/products"
+                  ? pathname === "/products" || pathname.startsWith("/products/")
+                  : link.href === "/"
+                    ? pathname === "/"
+                    : pathname === "/" && active === link.href.slice(1);
             return (
               <a
                 key={link.href}

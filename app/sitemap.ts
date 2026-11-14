@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
-import { serviceSlugs } from "@/lib/content";
+import { productSlugs, serviceSlugs } from "@/lib/content";
 import { site } from "@/lib/site";
 
 /**
- * The home page, the services index and one page per service. Section anchors
- * are not separate pages, so they are deliberately not listed.
+ * The home page, the services and products indexes, and one page per service
+ * and per product. Section anchors are not separate pages, so they are
+ * deliberately not listed.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, "");
@@ -27,6 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    {
+      url: `${base}/products`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    ...productSlugs.map((slug) => ({
+      url: `${base}/products/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
   ];
 }
