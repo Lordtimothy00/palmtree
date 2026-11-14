@@ -529,6 +529,49 @@ export const products: Product[] = [
       "You want cameras and solar installed by one team",
       "You want to check footage from your phone",
     ],
+    variantsIntro:
+      "Cameras differ in shape, in whether they record sound and see in the dark, and — most importantly — in how the footage is stored. That last one decides what you can actually prove after an incident.",
+    variants: [
+      {
+        label: "Dome camera",
+        summary:
+          "A rounded unit whose direction is not obvious from a distance. Often used indoors and under eaves, where it is out of easy reach.",
+        suits:
+          "Shops, corridors, offices and entrances where you would rather people could not tell exactly where it is pointing.",
+      },
+      {
+        label: "Bullet camera",
+        summary:
+          "A long, directional body with a visible lens. It reads clearly as a camera, which is part of the point.",
+        suits:
+          "Gates, yards, fences and perimeters where you want the camera to be seen, and where it needs to look down a long line.",
+      },
+      {
+        label: "PTZ (pan, tilt, zoom) camera",
+        summary:
+          "Motorised, so it can be turned and zoomed to cover a wide area or follow something moving, rather than staring at one spot.",
+        suits:
+          "Large compounds and open areas where one camera has to do the work of several, or where you need to zoom in on a face or plate.",
+      },
+      {
+        label: "Analog (HD over coax)",
+        summary:
+          "Cameras on copper cable back to a recorder. Simple, robust and cheap to extend, with no network to configure.",
+        suits:
+          "Straightforward installations over existing cabling, where a modest number of cameras is enough and you do not need remote access from anywhere.",
+      },
+      {
+        label: "IP (network) camera",
+        summary:
+          "Cameras that send footage over the network. Sharper, easier to view from a phone, and easy to add one camera at a time.",
+        suits:
+          "Most new installations, and anywhere you want to check footage remotely or keep the recordings safe if the recorder itself is taken.",
+      },
+    ],
+    aside: {
+      title: "Where the footage is stored decides everything",
+      body: "A camera that records only to an SD card inside its own housing is lost the moment someone takes the camera. A recorder on-site keeps footage from all cameras but can go with the burglars. Storing to the cloud survives both. Decide this before you decide how many cameras you want — a system with the wrong storage proves nothing after the event you bought it for.",
+    },
     installService: "cctv",
   },
 ];

@@ -38,7 +38,8 @@ header all pick it up.
 A product page can carry a `variants` array, which renders as a numbered
 "Types of …" section — used on `/products/inverters` (five kinds) and
 `/products/batteries` (tubular, sealed lead-acid, lithium) and
-`/products/charge-controllers` (PWM, MPPT). Variants can each
+`/products/charge-controllers` (PWM, MPPT) and `/products/cctv-cameras` (dome,
+bullet, PTZ, analog, IP). Variants can each
 carry their own photo. Battery types deliberately are **not** separate product
 cards or pages; they are types within one page, and the old
 `/products/lithium-batteries` and `/products/deep-cycle-batteries` URLs
