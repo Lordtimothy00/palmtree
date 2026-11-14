@@ -22,6 +22,23 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  async redirects() {
+    // Lithium and tubular batteries were separate product cards. They are now
+    // two of the three types on /products/batteries, so the old URLs are
+    // permanent redirects rather than 404s — they have been shared and indexed.
+    return [
+      {
+        source: "/products/lithium-batteries",
+        destination: "/products/batteries",
+        permanent: true,
+      },
+      {
+        source: "/products/deep-cycle-batteries",
+        destination: "/products/batteries",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

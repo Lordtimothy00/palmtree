@@ -29,6 +29,9 @@ export type ProductVariant = {
   summary: string;
   /** Who it suits. */
   suits: string;
+  /** Optional photo for this kind, shown beside the description. */
+  image?: string;
+  imageAlt?: string;
 };
 
 export type Product = {
@@ -340,47 +343,59 @@ export const products: Product[] = [
     installService: "solar-installation",
   },
   {
-    slug: "lithium-batteries",
-    name: "Lithium Batteries",
+    slug: "batteries",
+    name: "Batteries",
     category: "Storage",
-    description: "Lithium storage for longer runtime and a smaller footprint.",
-    image: "/images/company/product-lithium-batteries.jpg",
-    imageAlt: "Lithium solar home system and matching appliances",
-    summary:
-      "Storage that holds more usable power in less space, and lasts more cycles than lead-acid.",
-    detail: [
-      "Batteries store the power your system generates so you can use it at night or during an outage. Lithium batteries store more usable capacity for their size and weight than tubular batteries.",
-      "They also tolerate deeper discharge without the damage that shortens the life of a lead-acid battery, which means more of the stated capacity is actually available to you.",
-      "They cost more up front. Whether that pays off depends on how deeply and how often you will cycle them.",
-    ],
-    chooseBecause: [
-      "You want the most runtime in the smallest space",
-      "Your system cycles deeply every day",
-      "You are short of room for a battery bank",
-      "You want fewer replacements over the life of the system",
-    ],
-    installService: "solar-installation",
-  },
-  {
-    slug: "deep-cycle-batteries",
-    name: "Deep-Cycle Batteries",
-    category: "Storage",
-    description: "Tubular deep-cycle batteries for inverter and solar backup.",
+    description: "Tubular, sealed and lithium storage for solar and inverter systems.",
     image: "/images/company/product-deep-cycle-batteries.jpg",
     imageAlt: "Tall tubular battery on a steel stand with an intelligent power inverter above it",
     summary:
-      "Proven tubular storage that is cheaper to buy and easier to service than lithium.",
+      "Storage that holds the power your system generates so you can use it at night or during an outage.",
     detail: [
-      "Tubular deep-cycle batteries are built to be discharged and recharged repeatedly, which is what a backup system asks of them. They are the common choice for inverter systems in Nigeria.",
-      "They cost less to buy than lithium for the same nominal capacity, and they can be serviced — water levels topped up — rather than simply replaced.",
-      "They are heavier, take up more floor space, and give fewer usable cycles, so they suit a budget or a location where space is not the constraint.",
+      "Batteries are what make a solar system useful after dark. Panels generate only while there is daylight; the battery bank is what carries the building through the evening and through any outage.",
+      "The three families below are what you will actually be choosing between in the market. They differ in up-front cost, how much of their stated capacity you can actually use, how long they last, and how much space they take up.",
+      "Capacity written on a battery is not the same as capacity you can use. A lead-acid battery that is discharged too deeply is damaged by it, so only part of its rating is realistically available; lithium tolerates deeper discharge. This is why comparing two batteries by their labels alone usually misleads.",
     ],
     chooseBecause: [
-      "You want a lower up-front cost",
-      "You have floor space for a battery bank",
-      "You want batteries that can be serviced",
-      "You are replacing an existing tubular bank",
+      "You are building a solar or inverter system",
+      "Your existing bank no longer holds a charge",
+      "You want longer runtime than the current setup gives",
+      "You are short of space for a battery bank",
+      "You are replacing lead-acid with lithium, or deciding whether to",
     ],
+    variantsIntro:
+      "There are three families of battery in common use for solar and inverter systems. The right one depends on your budget, how deeply you will cycle it every day, and how much room you have.",
+    variants: [
+      {
+        label: "Tubular deep-cycle (lead-acid)",
+        summary:
+          "Built to be discharged and recharged repeatedly. The most common choice for inverter systems, and the easiest to service — water levels are topped up rather than the unit being thrown away.",
+        suits:
+          "Buyers who want the lowest up-front cost and have floor space for a bank. Heavier and bulkier, and it gives fewer usable cycles than lithium.",
+        image: "/images/company/product-deep-cycle-batteries.jpg",
+        imageAlt: "Tall tubular deep-cycle battery on a steel stand",
+      },
+      {
+        label: "Sealed lead-acid (AGM or gel)",
+        summary:
+          "Lead-acid that needs no water topping up, so it can be mounted where it is not easy to reach and does not vent the way a flooded battery does.",
+        suits:
+          "Installations where maintenance access is awkward. Costs more than tubular for the same rating, and generally does not last as long under daily deep cycling.",
+      },
+      {
+        label: "Lithium (LiFePO4)",
+        summary:
+          "Stores more usable capacity for its size and weight, tolerates deep discharge without the damage that shortens a lead-acid battery's life, and gives far more cycles.",
+        suits:
+          "Systems that cycle hard every day, rooms with no space for a battery bank, and anyone who would rather buy once. It costs more up front than lead-acid.",
+        image: "/images/company/product-lithium-batteries.jpg",
+        imageAlt: "Lithium solar system with matching appliances",
+      },
+    ],
+    aside: {
+      title: "Depth of discharge is what the label hides",
+      body: "Two batteries with the same rating do not give you the same runtime. Lead-acid is damaged by being run flat, so in practice only part of its capacity is usable; lithium can be taken much deeper. Compare usable capacity, not printed capacity, and expect to replace lead-acid sooner.",
+    },
     installService: "solar-installation",
   },
   {

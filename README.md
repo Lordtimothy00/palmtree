@@ -27,13 +27,21 @@ has its own page underneath it.
 | Home | `/` | Hero, services, products, about, contact |
 | Services index | `/services` | The five services, each summary linking to its page |
 | Service detail | `/services/<slug>` | What the work involves, what it covers, enquiry |
-| Products index | `/products` | All eight products, grouped by type |
-| Product detail | `/products/<slug>` | What it is, who it suits, install link, enquiry |
+| Products index | `/products` | All products, grouped by type |
+| Product detail | `/products/<slug>` | What it is, its types, who it suits, install link, enquiry |
 
 Service and product pages are pre-rendered at build time from `lib/content.ts`
 via `generateStaticParams`, so adding one means adding a single object to the
 `services` or `products` array — the index, detail page, sitemap, footer and
 header all pick it up.
+
+A product page can carry a `variants` array, which renders as a numbered
+"Types of …" section — used on `/products/inverters` (five kinds) and
+`/products/batteries` (tubular, sealed lead-acid, lithium). Variants can each
+carry their own photo. Battery types deliberately are **not** separate product
+cards or pages; they are types within one page, and the old
+`/products/lithium-batteries` and `/products/deep-cycle-batteries` URLs
+permanent-redirect to `/products/batteries`.
 
 There are no prices, stock figures or specifications on any product page. The
 product structured data deliberately omits an `offers` block: claiming

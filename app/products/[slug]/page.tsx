@@ -182,16 +182,37 @@ export default async function ProductPage({ params }: Params) {
                           {variant.label}
                         </span>
                       </dt>
-                      <dd className="mt-2 space-y-2 pl-9">
-                        <p className="text-[13.5px] leading-relaxed text-navy-700/75">
-                          {variant.summary}
-                        </p>
-                        <p className="text-[13px] leading-relaxed text-navy-700/60">
-                          <span className="font-semibold text-forest-700">
-                            Best for:
-                          </span>{" "}
-                          {variant.suits}
-                        </p>
+                      <dd className="mt-3 pl-9">
+                        <div
+                          className={
+                            variant.image
+                              ? "flex flex-col gap-4 sm:flex-row sm:items-start"
+                              : undefined
+                          }
+                        >
+                          {variant.image && (
+                            <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-xl bg-mist sm:aspect-square sm:w-[124px]">
+                              <Image
+                                src={variant.image}
+                                alt={variant.imageAlt ?? variant.label}
+                                fill
+                                sizes="(max-width: 640px) 90vw, 124px"
+                                className="object-cover"
+                              />
+                            </div>
+                          )}
+                          <div className="space-y-2">
+                            <p className="text-[13.5px] leading-relaxed text-navy-700/75">
+                              {variant.summary}
+                            </p>
+                            <p className="text-[13px] leading-relaxed text-navy-700/60">
+                              <span className="font-semibold text-forest-700">
+                                Best for:
+                              </span>{" "}
+                              {variant.suits}
+                            </p>
+                          </div>
+                        </div>
                       </dd>
                     </div>
                   ))}
