@@ -275,6 +275,49 @@ export const products: Product[] = [
       "You are adding capacity before buying a larger battery",
       "You want panels supplied and mounted by the same team",
     ],
+    variantsIntro:
+      "Panels differ in the cell technology inside them and in how they can be mounted — on a roof or on the ground. Between those, almost every choice a buyer has to make is covered.",
+    variants: [
+      {
+        label: "Monocrystalline",
+        summary:
+          "Cut from a single crystal, which is why the cells are dark and uniform and often have rounded corners. The most efficient of the common types, so it gives the most power for the roof area it occupies.",
+        suits:
+          "Most installations where roof space is limited, and anyone who wants the most output from the area available. It costs more per panel than polycrystalline.",
+      },
+      {
+        label: "Polycrystalline",
+        summary:
+          "Cast rather than cut, which gives the mottled blue, square look. Cheaper per panel and only slightly less efficient, so it needs a little more area for the same output.",
+        suits:
+          "Installations where there is plenty of roof or ground area and the budget matters more than squeezing out the last bit of output per panel.",
+      },
+      {
+        label: "Thin film",
+        summary:
+          "A thin flexible layer rather than rigid silicon. Lighter, and it performs relatively better in heat and in low or diffused light, but it takes a much larger area for the same output.",
+        suits:
+          "Unusual mounting surfaces, large flat roofs with area to spare, and situations where heat or partial shade would hurt a rigid panel more. Not the choice when space is tight.",
+      },
+      {
+        label: "Roof-mounted",
+        summary:
+          "Panels fixed to the roof on rails or brackets, either on the slope itself or on a frame above a flat roof. Keeps the ground clear and uses surface nothing else could.",
+        suits:
+          "Most homes and shops. The constraint is whether the roof is strong enough and correctly oriented — a good roof in the wrong direction beats nobody.",
+      },
+      {
+        label: "Ground-mounted",
+        summary:
+          "Panels on a frame on the ground, on a pole or a fixed structure, at whatever angle and direction suits the site rather than whatever the roof happens to be.",
+        suits:
+          "Buildings with a poor roof, or none worth using, and compounds with spare ground. Easier to angle correctly, clean, and expand later.",
+      },
+    ],
+    aside: {
+      title: "Shade and direction matter more than the panel",
+      body: "A shaded or badly oriented panel loses far more than the gap between one panel type and another. One tree shadow across an array, or a roof facing the wrong way, can undo the advantage of buying the better panel. Look at where the sun falls across the day and what will shade the roof in a few years, before comparing specifications.",
+    },
     installService: "solar-installation",
   },
   {
